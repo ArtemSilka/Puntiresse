@@ -144,3 +144,12 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 732ms (Views: 726.9ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/" for ::1 at 2020-07-27 17:15:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 0.8ms)
+
+
