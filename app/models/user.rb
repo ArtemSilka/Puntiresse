@@ -32,6 +32,10 @@ class User < ApplicationRecord
         foreign_key: :followed_id,
         class_name: :Follow
 
+    has_many :board_pins,
+        through: :boards,
+        source: :board_pins
+
     attr_reader :password
 
     def self.find_by_credentials(email, password)
