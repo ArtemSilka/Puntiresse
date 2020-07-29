@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "./nav_bar/nav_bar_container";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 
 const App = () => (  
     <div className="rI LS">
@@ -11,8 +12,8 @@ const App = () => (
                 <div className="rI LS">
                     <Navbar />
 
-                    <Route path="/login" component={LoginFormContainer} />
-                    <Route path="/signup" component={SignupFormContainer} />
+                    <AuthRoute path="/login" component={LoginFormContainer} />
+                    <AuthRoute path="/signup" component={SignupFormContainer} />
                 </div>
             </div>
         </div>
