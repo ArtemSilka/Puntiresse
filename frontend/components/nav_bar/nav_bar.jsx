@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default ({ currentUser, logout }) => {
     const display = currentUser ? (
-        <header className="nav-bar-container">
+        <div className="nav-bar-container">
 
             <Link to="/">
                 <div className="nav-bar-logo-container">
@@ -23,33 +23,58 @@ export default ({ currentUser, logout }) => {
             <div className="inbox-container"><i className=""></i></div>
 
             <button className="nav-bar-logout-button" onClick={logout}>Log out</button>
-        </header>
+        </div>
     ) : (
-        <header className="nav-bar-container">
-
-            <Link to="/">
-                <div className="nav-bar-logo-container">
-                    <img src={window.logoURL} height="32px" width="32px" alt="Logo" />
+            <div className="rU ss Ia No rI LS raz">
+                <div className="rU Ia k No rI LS">
+                    <div className="un it eD">
+                <Link to="/">
+                        <img className="tre" src={window.logoURL} height="32px" width="32px" alt="Logo" />
+                </Link>
+                    </div>
+                    <div className="St rI LS">
+                        <h3 className="aT ES oF Am it eR dva">Puntiresse</h3> 
+                    </div>
+            </div>
+            <div className="rU iC rI LS">
+                <div className="rU Ia An No rI LS">
+                    <div className="rG BE rI LS">
+                        <a className="Tt gU EY rI eD RS jE">
+                            <div className="ES oF Je Bj eR zT mW na">About</div>
+                        </a>
+                    </div>
+                    <div className="rG BE rI LS">
+                        <a className="Tt gU EY rI eD RS jE">
+                            <div className="ES oF Je Bj eR zT mW na">Business</div>
+                        </a>
+                    </div>
+                    <div className="rG BE rI LS">
+                        <a className="Tt gU EY rI eD RS jE">
+                            <div className="ES oF Je Bj eR zT mW na">Blog</div>
+                        </a>
+                    </div>
                 </div>
-                <div>Puntiresse</div>
-            </Link>
 
-            <div>
-                <Link to="/"><div className="nav-bar-link">About</div></Link>
-                <Link to="/"><div className="nav-bar-link">Business</div></Link>
-                <Link to="/"><div className="nav-bar-link">Blog</div></Link>
+                <div className="Gd kN em IL rI LS">
+                    <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI" >
+                        <Link to="/login">
+                            <div className="ES oF Je tR t7 mW">Log in</div>
+                        </Link>
+                    </button>
+                </div>
+                <div className="Gd kN em IL rI LS">
+                    <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI" >
+                        <div className="ES oF Je tR t7 mW">
+                            <Link to="/signup">Sign up</Link>
+                        </div>
+                    </button>
+                </div>
             </div>
-
-            <div>
-                <Link to="/login">Log In</Link>
-                <Link to="/signup">Sign Up</Link>
-            </div>
-
-        </header>
+        </div>
     );
 
     return (
-        <div>
+        <div className="rI LS"> 
             {display}
         </div>
     );
