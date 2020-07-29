@@ -2,7 +2,6 @@ a{font-weight:700;}
 a{color:#333;text-decoration:none;}
 a:focus,a:hover{color:#262626;}
 a:active,a:hover{outline:0;}
-button{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,&#12498;&#12521;&#12462;&#12494;&#35282;&#12468; Pro W3,Hiragino Kaku Gothic Pro,&#12513;&#12452;&#12522;&#12458;,Meiryo,&#65325;&#65331; &#65328;&#12468;&#12471;&#12483;&#12463;,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:100%;margin:0;vertical-align:middle;}
 button{line-height:normal;}
 button::-moz-focus-inner{padding:0;border:0;}
 button{cursor:pointer;-webkit-appearance:button;}
