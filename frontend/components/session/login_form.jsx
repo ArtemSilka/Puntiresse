@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state)
-            .then(null, (errors) => {
+            .then(null, (err) => {
                 this.setState({ errors: this.renderErrors() })
             })
 
@@ -34,7 +34,52 @@ class LoginForm extends React.Component {
         }
     }
 
+    renderErrors() {
+        let noEmail = [];
+        let wrongEmail = [];
+        let wrongPassword = [];
+
+        function emailCheck(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        if (this.props.errors.includes("Invalid credentials")) {
+
+            if (this.state.email === '') {
+                noEmail.push("You missed a spot! Don’t forget to add your email.")
+            } else if (!emailCheck(this.state.email)) {
+                wrongEmail.push("Hmm...that doesn't look like an email address.")
+            }
+            else {
+                wrongPassword.push(`The password you entered is incorrect. Try again`) // or ${<a href="">Reset your password</a>}
+            }
+        }
+        if (noEmail.length) {
+            return noEmail
+        } else if (wrongEmail.length) {
+            return wrongEmail
+        } else if (wrongPassword.length) {
+            return wrongPassword
+        }
+    }
+
+    emailErrors() {
+        if (this.state.errors[0] === "You missed a spot! Don’t forget to add your email."
+            || this.state.errors[0] === "Hmm...that doesn't look like an email address.") {
+            return this.state.errors;
+        }
+    }
+
+    passwordErrors() {
+        if (this.state.errors[0] === `The password you entered is incorrect. Try again`) { //or ${<a>Reset your password</a>}
+            return this.state.errors;
+        }
+    }
+
     render() {
+
+
         return (
             <div className="login-container">
                 <button className="login-x-button"><Link to='/'>X</Link></button>
@@ -48,16 +93,18 @@ class LoginForm extends React.Component {
                         <form onSubmit={this.handleSubmit} className="login-form">
                             <input 
                                 type="text" 
-                                placeholder="email" 
+                                placeholder="Email" 
                                 value={this.state.email} 
                                 onChange={this.update('email')} 
                                 />
+                                <span className="err">{this.emailErrors()}</span>
                             <input 
                                 type="password" 
                                 placeholder="Password" 
                                 value={this.state.password} 
                                 onChange={this.update('password')} 
                                 />
+                                <span className="err">{this.passwordErrors()}</span>
                             <input 
                                 className="login-form-submit" 
                                 type="submit" 

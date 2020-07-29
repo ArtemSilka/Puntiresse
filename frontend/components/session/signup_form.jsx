@@ -25,7 +25,48 @@ class SignupForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
+    renderErrors() {
+        let noEmail = [];
+        let wrongEmail = [];
+        let emailExist = [];
+        let wrongPassword = [];
+
+        function emailCheck(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        if (this.props.errors.includes("Email can't be blank")) {
+            noEmail.push("You missed a spot! Don’t forget to add your email.");
+            return noEmail;
+        } else if (this.props.errors.includes("Email has already been taken")) {
+            emailExist.push("Please use a different email.");
+            return emailExist;
+        } else if (!emailCheck(this.state.email)) {
+            wrongEmail.push("Hmm...that doesn't look like an email address.");
+            return wrongEmail;
+        } else if (this.props.errors.includes("Password is too short (minimum is 6 characters)")) {
+            wrongPassword.push("Your password is too short! You need 6+ characters.");
+            return wrongPassword;
+        }
+    }
+
+    emailErrors() {
+        if (this.state.errors[0] === "You missed a spot! Don’t forget to add your email."
+            || this.state.errors[0] === "Hmm...that doesn't look like an email address."
+            || this.state.errors[0] === "Please use a different email.") {
+            return this.state.errors;
+        }
+    }
+
+    passwordErrors() {
+        if (this.state.errors[0] === "Your password is too short! You need 6+ characters.") {
+            return this.state.errors;
+        }
+    }
+
     render() {
+
         return (
             <div className="signup-container">
                 <button className="signup-x-button"><Link to='/'>X</Link></button>
@@ -45,13 +86,14 @@ class SignupForm extends React.Component {
                                 value={this.state.email} 
                                 onChange={this.update('email')} 
                                 />
+                                <span className="err">{this.emailErrors()}</span>                                   
                             <input 
                                 type="password" 
                                 placeholder="Create a password" 
                                 value={this.state.password} 
                                 onChange={this.update('password')} 
                                 />
-                            
+                                <span className="err">{this.passwordErrors()}</span>                                
                             <input 
                                 className="signup-form-submit" 
                                 type="submit" 
