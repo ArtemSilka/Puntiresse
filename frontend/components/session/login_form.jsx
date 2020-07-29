@@ -5,7 +5,7 @@ class LoginForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: '',
+            email: '',
             password: '',
             errors: this.props.errors
         };
@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.login({ username: 'DemoUser', password: 'Password' })
+        this.props.login({ email: 'DemoUser@puntiresse.com', password: 'Password' })
     }
 
     update(field) {
@@ -48,9 +48,9 @@ class LoginForm extends React.Component {
                         <form onSubmit={this.handleSubmit} className="login-form">
                             <input 
                                 type="text" 
-                                placeholder="Username" 
-                                value={this.state.username} 
-                                onChange={this.update('username')} 
+                                placeholder="email" 
+                                value={this.state.email} 
+                                onChange={this.update('email')} 
                                 />
                             <input 
                                 type="password" 
