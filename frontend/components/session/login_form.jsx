@@ -79,13 +79,16 @@ class LoginForm extends React.Component {
 
     render() {
 
-
         return (
-            <div className="login-container">
-                <button className="login-x-button"><Link to='/'>X</Link></button>
+            <div className="modal-container">
+                <button 
+                    className="modal-x-button Ia LS ad Z3 hA- na eD rI">
+                    <Link className="X" to='/'>X</Link> {/* <i class="fas fa-times"></i> */}
+                </button>
+                
+                <div className="modal-box-container">
 
-                <div className="login-box-container">
-                    <div className="login-box">
+                    <div className="modal-box">
                         <img src={window.logoURL} height="45px" width="45px" alt="Logo" />
 
                         <h3>Welcome to Puntiresse</h3>

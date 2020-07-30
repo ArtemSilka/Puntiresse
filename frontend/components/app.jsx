@@ -6,18 +6,13 @@ import SignupFormContainer from "./session/signup_form_container";
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 
 const App = () => (  
-    <div className="rI LS">
-        <div>{/* <div> style="margin-top: 0px;" */}
-            <div className="rI LS">
-                <div className="rI LS">
-                    <Navbar />
 
-                    <AuthRoute path="/login" component={LoginFormContainer} />
-                    <AuthRoute path="/signup" component={SignupFormContainer} />
-                </div>
-            </div>
-        </div>
-    </div>
+    <header>
+        <Navbar />
+        
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+    </header>
 );
 
 export default App;
