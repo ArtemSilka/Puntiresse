@@ -88,44 +88,86 @@ class LoginForm extends React.Component {
                 
                 <div className="modal-box-container">
 
-                    <div className="modal-box">
-                        <img src={window.logoURL} height="45px" width="45px" alt="Logo" />
+                    <div className="modal-box oF">
+                        <div className="logo">
+                            <img src={window.logoURL} height="50px" width="50px" alt="Logo" />
+                        </div>
 
-                        <h3>Welcome to Puntiresse</h3>
+                        <div className="welcome">
+                            <h3>Welcome to Puntiresse</h3>
+                        </div>
 
-                        <form onSubmit={this.handleSubmit} className="login-form">
-                            <input 
-                                type="text" 
-                                placeholder="Email" 
-                                value={this.state.email} 
-                                onChange={this.update('email')} 
-                                />
-                                <span className="err">{this.emailErrors()}</span>
-                            <input 
-                                type="password" 
-                                placeholder="Password" 
-                                value={this.state.password} 
-                                onChange={this.update('password')} 
-                                />
-                                <span className="err">{this.passwordErrors()}</span>
-                            <input 
-                                className="login-form-submit" 
-                                type="submit" 
-                                value="Log in" 
-                                />
-                            <button 
-                                onClick={this.demoLogin} 
-                                className="demo-login-button">Demo Log in
-                            </button>
+                        <div className="form-container">
+                            <div className="form-container-box">
+                                <div>
+                                    <form onSubmit={this.handleSubmit} className="login-form">
+                                        
+                                        <div className="form1">
+                                            <input 
+                                                className="einp wyq oF"
+                                                type="text" 
+                                                placeholder="Email" 
+                                                value={this.state.email} 
+                                                onChange={this.update('email')} 
+                                                />
+                                                <div className="err1">
+                                                    <div className="err2 oF">
+                                                        <span>{this.emailErrors()}</span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div className="form1">
+                                            <input 
+                                                className="einp wyq oF"
+                                                type="password" 
+                                                placeholder="Password" 
+                                                value={this.state.password} 
+                                                onChange={this.update('password')} 
+                                                />
+                                                <div className="err1">
+                                                    <div className="err2 oF">
+                                                        <span>{this.passwordErrors()}</span>
+                                                    </div>
+                                                </div>
+                                        </div>
 
-                            <p>By continuing, you agree to Puntiresse's <a>Terms of Service</a>, <a>Privacy policy</a></p>
-                            
-                            <div className="horizontal-line"></div>
-                            
-                            <p><Link to='/signup'>Not on Puntiresse yet? Sign up</Link></p>
+                                            <div className="already2 lef or1">
+                                                <a>Forgot your password?</a>
+                                            </div>
 
-                        </form>
+                                        <button className="sub-cont" type="submit">
+                                            <div>Log in</div>
+                                        </button>
+                                        <div className="terms">
+                                            <span className="or1">
+                                                OR
+                                            </span>
+                                        </div>
 
+                                        {/* future options */}
+                                        <button className="sub-fac" type="submit">
+                                            <div>Continue with Facebook</div>
+                                        </button>
+
+                                        <button className="sub-goo" type="submit">
+                                            <div className="grey">Continue with Google</div>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div className="terms">
+                                    <span className="terms1">
+                                        By continuing, you agree to Puntiresse's <a>Terms of Service</a>, <a>Privacy policy</a>
+                                    </span>
+                                </div>
+                                <div className="already">
+                                    <div className="already1">
+                                        <div className="already2">
+                                            <Link to='/signup'>Not on Pinterest yet? Sign up</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,8 +10,8 @@
 
 .modal-x-button {
     position: absolute;
-    top: 10%;
-    left: 90%;
+    top: 6%;
+    left: 96%;
     transform: translate(-50%, -50%);
     background-color: rgb(76, 76, 76);
     border-style: none;
