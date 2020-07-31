@@ -36,6 +36,8 @@ class User < ApplicationRecord
         through: :boards,
         source: :board_pins
 
+    has_one_attached :photo
+
     attr_reader :password
 
     def self.find_by_credentials(email, password)
