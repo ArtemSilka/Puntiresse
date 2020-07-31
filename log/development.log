@@ -15107,3 +15107,84 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1431ms (Views: 1427.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-07-31 15:30:51 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/artemsilka/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gQbEy2odQn/x0pdCbvg06uWQa7gJroU60QIzkMcwvN7av4cr5Ixw/wDLFsd3NnzvaQvmk7YQVBgpxGGcfrGfZQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gQbEy2odQn/x0pdCbvg06uWQa7gJroU60QIzkMcwvN7av4cr5Ixw/wDLFsd3NnzvaQvmk7YQVBgpxGGcfrGfZQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gQbEy2odQn/x0pdCbvg06uWQa7gJroU60QIzkMcwvN7av4cr5Ixw/wDLFsd3NnzvaQvmk7YQVBgpxGGcfrGfZQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 1582ms (Views: 1569.9ms | ActiveRecord: 9.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 15:30:56 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gQbEy2odQn/x0pdCbvg06uWQa7gJroU60QIzkMcwvN7av4cr5Ixw/wDLFsd3NnzvaQvmk7YQVBgpxGGcfrGfZQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gQbEy2odQn/x0pdCbvg06uWQa7gJroU60QIzkMcwvN7av4cr5Ixw/wDLFsd3NnzvaQvmk7YQVBgpxGGcfrGfZQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@puntiresse.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "r3Hv0vRVhfEXCUL7LxZdVvD6KAijQqqfvPLc7UOBZYnw+swrC8CNKTtDxGAMEt9PRqWhQKcBkwS9bgkHy0ehCg=="], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "r3Hv0vRVhfEXCUL7LxZdVvD6KAijQqqfvPLc7UOBZYnw+swrC8CNKTtDxGAMEt9PRqWhQKcBkwS9bgkHy0ehCg=="], ["updated_at", "2020-07-31 19:30:56.076720"], ["id", 17]]
+  ↳ app/models/user.rb:58
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:58
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 24ms (Views: 11.9ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 15:31:01 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demouser@puntiresse.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@puntiresse.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@puntiresse.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "ES8OPTlIIv4D8d4k78upqzzxihVZ9FFqcjGfKxoCR53/tzNLXkpLWJkGY51uXjrnenwcTLCS8pEdGoyGFw0tTA=="], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ES8OPTlIIv4D8d4k78upqzzxihVZ9FFqcjGfKxoCR53/tzNLXkpLWJkGY51uXjrnenwcTLCS8pEdGoyGFw0tTA=="], ["updated_at", "2020-07-31 19:31:02.152602"], ["id", 17]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:58
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 252ms (Views: 5.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/pins" for ::1 at 2020-07-31 15:31:12 -0400
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (1.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/index.json.jbuilder (23.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 7.9ms)
+
+
+
+ActionView::Template::Error - undefined method `photo' for #<Pin:0x00007fdbfef54970>:
+  app/views/api/pins/index.json.jbuilder:9:in `view template'
+
+Started POST "/__better_errors/b496a0651675fd7c/variables" for ::1 at 2020-07-31 15:31:12 -0400
+Started GET "/api/pins/1" for ::1 at 2020-07-31 15:31:53 -0400
+Processing by Api::PinsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPin Load (0.7ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/pins_controller.rb:7
+  Rendering api/pins/show.json.jbuilder
+  Rendered api/pins/show.json.jbuilder (0.7ms)
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mPin Load (0.7ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
