@@ -133,12 +133,18 @@ class SignupForm extends React.Component {
                                         </div>
 
                                         {/* future options */}
-                                        <button className="sub-fac" type="submit">
-                                            <div>Continue with Facebook</div>
+                                        <button className="sub-fac dis" type="submit">
+                                            <div className="dis">
+                                                <img className="bbb" src={window.facebookURL} height="24px" width="24px" alt="Logo" />
+                                                <div className="bbb bBb">Continue with Facebook</div>
+                                            </div>
                                         </button>
 
-                                        <button className="sub-goo" type="submit">
-                                            <div className="grey">Continue with Google</div>
+                                        <button className="sub-goo dis" type="submit">
+                                            <div className="dis">
+                                                <img className="bbb" src={window.googleURL} height="24px" width="24px" alt="Logo" />
+                                                <div className="bbb bBb grey">Continue with Google</div>
+                                            </div>
                                         </button>
                                     </form>
                                 </div>

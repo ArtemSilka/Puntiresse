@@ -164,10 +164,6 @@ class LoginForm extends React.Component {
                                                 <div className="bbb bBb grey">Continue with Google</div>
                                             </div>
                                         </button>
-{/* 
-                                        <button className="sub-goo" type="submit">
-                                            <div className="grey">Continue with Google</div>
-                                        </button> */}
                                     </form>
                                 </div>
                                 <div className="terms">
