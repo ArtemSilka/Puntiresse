@@ -82,6 +82,7 @@ a:focus,a:hover{color:#262626;}
 .si:focus,.si:hover{background-color:#ad081b;}
 .si:active{background-color:#a3081a;}
 .Tt{color:inherit;outline:none;}
+.Ttr{outline:none;}
 .it{color:#e60023;}
 .lg{background-color:#e60023;}
 .tR{color:#fff;}
@@ -96,6 +97,7 @@ a:focus,a:hover{color:#262626;}
 .qJc{background-color:#fff;}
 .B9u{color:#767676;}
 .YbY{background-color:transparent;}
+.bYb{color:#333}
 
 /* Font/ Text/ Decor */
 
@@ -115,9 +117,11 @@ a{font-weight:700;}
 .Je{font-size:16px;}
 .RS{border-radius:0;}
 .ad{border:0;}
+.adZ{border:none;}
 .na{cursor:pointer;}
 .LS{box-sizing:border-box;}
 .dva{font-weight: 700;}
+.dvav{font-weight: normal;}
 .tre{cursor: default;}
 .d{border-radius:50%;}
 .fv{border-radius:24px;}

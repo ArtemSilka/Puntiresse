@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.login({ email: 'DemoUser@puntiresse.com', password: 'Password' })
+        this.props.login({ email: 'demouser@puntiresse.com', password: 'password' })
     }
 
     update(field) {
@@ -144,6 +144,10 @@ class LoginForm extends React.Component {
                                             </span>
                                         </div>
 
+                                        <button onClick={this.demoLogin} className="sub-cont pink" type="submit">
+                                            <div>Demo Log in</div>
+                                        </button>
+
                                         {/* future options */}
                                         <button className="sub-fac" type="submit">
                                             <div>Continue with Facebook</div>
@@ -176,3 +180,8 @@ class LoginForm extends React.Component {
 }
 
 export default LoginForm;
+
+{/* <button
+    onClick={this.demoLogin}
+    className="demo-login-button">Demo Log in
+</button> */}

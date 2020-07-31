@@ -69,7 +69,7 @@ export default ({ currentUser, logout }) => {
                                         </img>
                                     </div>
                                     <div className="uU zI7 rI LS Xa">
-                                        <input className="twe" type="text" placeholder="Search for Baby cats"
+                                        <input className="YbY bYb adZ Je dvav six Ttr yQo twe" type="text" placeholder="Search for Dogs"
                                             />
                                         </div>
                                     </div>
@@ -80,17 +80,17 @@ export default ({ currentUser, logout }) => {
                         {/* right */}
                         <div className="rU No zI7 rI LS">
                             {/* Profile */}
-                            <div class="zI7 rI LS">
-                                <div class="d zI7 rI LS fou">
-                                    <a class="rI fif">
-                                        <div class="d rU No m8 zI7 rI LS six a_A">
-                                            <div class="d rU No m8 zI7 rI LS tw1">
-                                                <div class="d XG qJc zI7 rI LS tw2">
-                                                    <div class="Pj7 sLG XG d m1e">
-                                                        <div class="XG zI7 rI LS tw3">
-                                                            <img class="hCL eD po MIw" src={window.profileURL}/>
+                            <div className="zI7 rI LS">
+                                <div className="d zI7 rI LS fou">
+                                    <a className="rI fif">
+                                        <div className="d rU No m8 zI7 rI LS six a_A">
+                                            <div className="d rU No m8 zI7 rI LS tw1">
+                                                <div className="d XG qJc zI7 rI LS tw2">
+                                                    <div className="Pj7 sLG XG d m1e">
+                                                        <div className="XG zI7 rI LS tw3">
+                                                            <img className="hCL eD po MIw" src={window.profileURL}/>
                                                         </div>
-                                                        <div class="KPc MIw ojN Rym p6V QLY"></div>
+                                                        <div className="KPc MIw ojN Rym p6V QLY"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -100,10 +100,10 @@ export default ({ currentUser, logout }) => {
                             </div>
 
                             {/* dropdown */}
-                            <div class="zI7 rI LS tw7">
-                                <button class="rYa eD ad yQo EY qrs na" type="button">
-                                    <div class="x8f d _O1 No m8 OGJ YbY tw5 a_A" onClick={showMenu}>
-                                        <img class="un B9u U9O eD" src={window.dropdownURL} height="20" width="20"/>
+                            <div className="zI7 rI LS tw7">
+                                <button className="rYa eD ad yQo EY qrs na" type="button">
+                                    <div className="x8f d _O1 No m8 OGJ YbY tw5 a_A" onClick={showMenu}>
+                                        <img className="un B9u U9O eD" src={window.dropdownURL} height="20" width="20"/>
                                     </div>
                                     <div id="drop" className="menu-back" onClick={showMenu}>
                                         <ul className="drop-down-menu oF mW" onClick={e => e.stopPropagation()}>
