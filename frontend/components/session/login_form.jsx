@@ -81,10 +81,12 @@ class LoginForm extends React.Component {
 
         return (
             <div className="modal-container">
-                <button 
-                    className="modal-x-button Ia LS ad Z3 hA- na eD rI">
-                    <Link className="X" to='/'>X</Link> {/* <i class="fas fa-times"></i> */}
-                </button>
+                <Link className="X Ia LS ad Z3 hA- na eD rI" to='/'>
+                    <button 
+                        className="modal-x-button Ia LS ad Z3 hA- na eD rI">
+                        X {/* <i class="fas fa-times"></i> */}
+                    </button>
+                </Link>
                 
                 <div className="modal-box-container">
 
@@ -149,13 +151,23 @@ class LoginForm extends React.Component {
                                         </button>
 
                                         {/* future options */}
-                                        <button className="sub-fac" type="submit">
-                                            <div>Continue with Facebook</div>
+                                        <button className="sub-fac dis" type="submit">
+                                            <div className="dis">
+                                                <img className="bbb" src={window.facebookURL} height="24px" width="24px" alt="Logo" />
+                                                <div className="bbb bBb">Continue with Facebook</div>
+                                            </div>
                                         </button>
 
+                                        <button className="sub-goo dis" type="submit">
+                                            <div className="dis">
+                                                <img className="bbb" src={window.googleURL} height="24px" width="24px" alt="Logo" />
+                                                <div className="bbb bBb grey">Continue with Google</div>
+                                            </div>
+                                        </button>
+{/* 
                                         <button className="sub-goo" type="submit">
                                             <div className="grey">Continue with Google</div>
-                                        </button>
+                                        </button> */}
                                     </form>
                                 </div>
                                 <div className="terms">
@@ -180,8 +192,3 @@ class LoginForm extends React.Component {
 }
 
 export default LoginForm;
-
-{/* <button
-    onClick={this.demoLogin}
-    className="demo-login-button">Demo Log in
-</button> */}

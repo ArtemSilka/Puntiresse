@@ -150,18 +150,20 @@ export default ({ currentUser, logout }) => {
                     </div>
 
                     <div className="Gd kN em IL rI LS">
-                        <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI" >
-                            <Link to="/login">
+                        <Link to="/login">
+                            <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI" >
                                 <div className="ES oF Je tR t7 mW">Log in</div>
-                            </Link>
-                        </button>
+                            </button>
+                        </Link>
                     </div>
                     <div className="Gd kN em IL rI LS">
-                        <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI" >
-                            <div className="ES oF Je tR t7 mW">
-                                <Link to="/signup">Sign up</Link>
-                            </div>
-                        </button>
+                        <Link to="/signup">
+                            <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI" >
+                                <div className="ES oF Je tR t7 mW">
+                                    <span className="grey">Sign up</span>
+                                </div>
+                            </button>
+                        </Link>
                     </div>
                 </div>
         </div>

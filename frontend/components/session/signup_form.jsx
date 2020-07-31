@@ -69,10 +69,12 @@ class SignupForm extends React.Component {
 
         return (
             <div className="modal-container">
-                <button
-                    className="modal-x-button Ia LS ad Z3 hA- na eD rI">
-                    <Link className="X" to='/'>X</Link> {/* <i class="fas fa-times"></i> */}
-                </button>
+                <Link className="X Ia LS ad Z3 hA- na eD rI" to='/'>
+                    <button
+                        className="modal-x-button Ia LS ad Z3 hA- na eD rI">
+                        X {/* <i class="fas fa-times"></i> */}
+                    </button>
+                </Link>
 
                 <div className="modal-box-container">
 
