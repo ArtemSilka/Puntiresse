@@ -1,4 +1,8 @@
 class Api::BoardsController < ApplicationController
+    def index
+        @boards = Board.all
+    end
+    
     def show
         @board = Board.find(params[:id])
     end
@@ -20,6 +24,15 @@ class Api::BoardsController < ApplicationController
             render "api/boards/show"
         else
             render :edit
+        end
+    end
+
+    def update
+        @board = Board.find(params[:id])
+        if (@board.user_id === current_user.id && @board.update(board_params))
+            render 'api/boards/show'
+        else
+            render json: @board.errors.full_messages, status: 422
         end
     end
 

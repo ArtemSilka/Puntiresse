@@ -1,5 +1,5 @@
 @pins.each  do |pin|
   json.set! pin.id do 
-    json.extract! pin, :id, :title, :description, :url
+    json.partial! 'api/pins/pin', pin: pin
   end
 end

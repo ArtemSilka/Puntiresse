@@ -1,1 +1,1 @@
-json.extract! @board, :id, :name, :description, :secret
+json.partial! 'api/boards/board', board: @board
