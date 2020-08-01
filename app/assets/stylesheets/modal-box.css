@@ -246,3 +246,7 @@ p #rrgf {
   box-shadow: 0 0 0 4px rgb(230, 0, 35);
   outline: 0;
 }
+
+.modal-container a:focus {
+    box-shadow: none;
+}
