@@ -66,14 +66,16 @@ class SignupForm extends React.Component {
     }
 
     render() {
+        const emailRedbox = this.emailErrors() ? 'redBox' : '';
+        const pwdRedBox = this.passwordErrors() ? 'redBox' : '';
 
         return (
             <div className="modal-container">
                 <Link className="X Ia LS ad Z3 hA- na eD rI" to='/'>
-                    <button
+                    <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src={window.xURL} />
+                    {/* <button
                         className="modal-x-button Ia LS ad Z3 hA- na eD rI">
-                        X {/* <i class="fas fa-times"></i> */}
-                    </button>
+                    </button> */}
                 </Link>
 
                 <div className="modal-box-container">
@@ -95,7 +97,7 @@ class SignupForm extends React.Component {
 
                                         <div className="form1">
                                             <input
-                                                className="einp wyq oF"
+                                                className={`einp wyq oF ${emailRedbox}`}
                                                 type="text" 
                                                 placeholder="Email" 
                                                 value={this.state.email} 
@@ -110,7 +112,7 @@ class SignupForm extends React.Component {
 
                                         <div className="form1">
                                             <input 
-                                                className="einp wyq oF"
+                                                className={`einp wyq oF ${pwdRedBox}`}
                                                 type="password" 
                                                 placeholder="Create a password" 
                                                 value={this.state.password} 
@@ -131,8 +133,16 @@ class SignupForm extends React.Component {
                                                 OR
                                             </span>
                                         </div>
-
+                                        <button onClick={this.demoLogin} className="sub-cont pink" type="submit">
+                                            <div>Demo Log in</div>
+                                        </button>
                                         {/* future options */}
+
+                                        {/* <div className="terms">
+                                            <span className="or1">
+                                                OR
+                                            </span>
+                                        </div>
                                         <button className="sub-fac dis" type="submit">
                                             <div className="dis">
                                                 <img className="bbb" src={window.facebookURL} height="24px" width="24px" alt="Logo" />
@@ -145,14 +155,16 @@ class SignupForm extends React.Component {
                                                 <img className="bbb" src={window.googleURL} height="24px" width="24px" alt="Logo" />
                                                 <div className="bbb bBb grey">Continue with Google</div>
                                             </div>
-                                        </button>
+                                        </button> */}
                                     </form>
                                 </div>
-                                <div className="terms">
+                                {/* future options */}
+
+                                {/* <div className="terms">
                                     <span className="terms1">
                                             By continuing, you agree to Puntiresse's <a>Terms of Service</a>, <a>Privacy policy</a>
                                     </span>
-                                </div>
+                                </div> */}
                                 <div className="already">
                                     <div className="already1">
                                         <div className="already2">

@@ -78,14 +78,16 @@ class LoginForm extends React.Component {
     }
 
     render() {
+        const emailRedbox = this.emailErrors() ? 'redBox' : '';
+        const pwdRedBox = this.passwordErrors() ? 'redBox' : '';
 
         return (
             <div className="modal-container">
                 <Link className="X Ia LS ad Z3 hA- na eD rI" to='/'>
-                    <button 
+                    <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src={window.xURL} />
+                    {/* <button 
                         className="modal-x-button Ia LS ad Z3 hA- na eD rI">
-                        X {/* <i class="fas fa-times"></i> */}
-                    </button>
+                    </button>  */}
                 </Link>
                 
                 <div className="modal-box-container">
@@ -106,7 +108,7 @@ class LoginForm extends React.Component {
                                         
                                         <div className="form1">
                                             <input 
-                                                className="einp wyq oF"
+                                                className={`einp wyq oF ${emailRedbox}`}
                                                 type="text" 
                                                 placeholder="Email" 
                                                 value={this.state.email} 
@@ -120,7 +122,7 @@ class LoginForm extends React.Component {
                                         </div>
                                         <div className="form1">
                                             <input 
-                                                className="einp wyq oF"
+                                                className={`einp wyq oF ${pwdRedBox}`}
                                                 type="password" 
                                                 placeholder="Password" 
                                                 value={this.state.password} 
@@ -132,10 +134,11 @@ class LoginForm extends React.Component {
                                                     </div>
                                                 </div>
                                         </div>
+                                        {/* future options */}
 
-                                            <div className="already2 lef or1">
+                                            {/* <div className="already2 lef or1">
                                                 <a>Forgot your password?</a>
-                                            </div>
+                                            </div> */}
 
                                         <button className="sub-cont" type="submit">
                                             <div>Log in</div>
@@ -151,7 +154,8 @@ class LoginForm extends React.Component {
                                         </button>
 
                                         {/* future options */}
-                                        <button className="sub-fac dis" type="submit">
+
+                                        {/* <button className="sub-fac dis" type="submit">
                                             <div className="dis">
                                                 <img className="bbb" src={window.facebookURL} height="24px" width="24px" alt="Logo" />
                                                 <div className="bbb bBb">Continue with Facebook</div>
@@ -163,14 +167,16 @@ class LoginForm extends React.Component {
                                                 <img className="bbb" src={window.googleURL} height="24px" width="24px" alt="Logo" />
                                                 <div className="bbb bBb grey">Continue with Google</div>
                                             </div>
-                                        </button>
+                                        </button> */}
                                     </form>
                                 </div>
-                                <div className="terms">
+                                {/* future options */}
+
+                                {/* <div className="terms">
                                     <span className="terms1">
                                         By continuing, you agree to Puntiresse's <a>Terms of Service</a>, <a>Privacy policy</a>
                                     </span>
-                                </div>
+                                </div> */}
                                 <div className="already">
                                     <div className="already1">
                                         <div className="already2">

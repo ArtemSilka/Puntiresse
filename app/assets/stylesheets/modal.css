@@ -13,12 +13,16 @@
     top: 6%;
     left: 96%;
     transform: translate(-50%, -50%);
-    background-color: rgb(76, 76, 76);
+    background-color: rgb(255, 255, 255);
     border-style: none;
+    height: 45px;
+    width: 45px;
 }
 
 .modal-x-button:hover{
     background-color: rgb(84, 84, 84);
+    color: rgb(255, 255, 255);
+
 }
 
 

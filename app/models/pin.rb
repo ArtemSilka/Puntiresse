@@ -13,6 +13,7 @@
 #
 class Pin < ApplicationRecord
     validates :title, :user_id, :board_id, presence: true
+    validate :ensure_photo
 
     belongs_to :user,
         foreign_key: :user_id,
@@ -22,5 +23,20 @@ class Pin < ApplicationRecord
         foreign_key: :board_id,
         class_name: :Board
 
-    has_one_attached :photo
+    has_many :board_pins,
+        foreign_key: :pin_id,
+        class_name: :BoardPin
+
+    has_many :boards,
+        through: :board_pins,
+        source: :board
+
+    has_one_attached :
+
+    def ensure_image
+    unless self.photo.attached?
+      errors[:photo] << "An image is required to create a Pin."
+    end
+  end
+
 end
