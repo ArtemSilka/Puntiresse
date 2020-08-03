@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
     has_many :pins,
         foreign_key: :user_id,
-        class_name: :Board
+        class_name: :Pin
 
     has_many :followers,
         foreign_key: :follower_id,

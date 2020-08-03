@@ -21,6 +21,7 @@ class SignupForm extends React.Component {
             });
     }
 
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
@@ -128,14 +129,15 @@ class SignupForm extends React.Component {
                                         <button className="sub-cont" type="submit">
                                             <div>Continue</div>
                                         </button>
-                                        <div className="terms">
+                                        {/* <div className="terms">
                                             <span className="or1">
                                                 OR
                                             </span>
                                         </div>
                                         <button onClick={this.demoLogin} className="sub-cont pink" type="submit">
                                             <div>Demo Log in</div>
-                                        </button>
+                                        </button> */}
+
                                         {/* future options */}
 
                                         {/* <div className="terms">

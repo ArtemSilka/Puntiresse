@@ -31,9 +31,9 @@ class Pin < ApplicationRecord
         through: :board_pins,
         source: :board
 
-    has_one_attached :
+    has_one_attached :photo
 
-    def ensure_image
+    def ensure_photo
     unless self.photo.attached?
       errors[:photo] << "An image is required to create a Pin."
     end
