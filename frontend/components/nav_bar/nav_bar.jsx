@@ -19,7 +19,7 @@ export default ({ currentUser, logout }) => {
                             <div className="">
                                 <div className="d eig">
                                     <div className="Sl jz m8 nin hA-">
-                                        <Link to="/">
+                                        <Link to="/home">
                                             <img className="un it eD tre" src={window.logoURL} height="24px" width="24px" alt="Logo" />
                                         </Link>
                                     </div>
@@ -27,6 +27,7 @@ export default ({ currentUser, logout }) => {
                             </div>
                         </div>
                         {/* Home */}
+                        <Link to="/home">
                         <div className="BF Eh fv rI LS pya">
                             <div className="EY rI fv Xa po na">
                                 <div className="Eh rU No m8 rI LS che">
@@ -38,6 +39,7 @@ export default ({ currentUser, logout }) => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                         {/* Today */}
                         <div className="Eh fv rI LS pya a_A">
                             <div className="EY rI fv Xa po na">

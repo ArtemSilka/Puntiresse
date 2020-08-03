@@ -12,7 +12,8 @@
 #  updated_at  :datetime         not null
 #
 class Pin < ApplicationRecord
-    validates :title, :user_id, :board_id, presence: true
+    # validates :title, :user_id, :board_id, presence: true
+    validates :title, presence: true
     validate :ensure_photo
 
     belongs_to :user,

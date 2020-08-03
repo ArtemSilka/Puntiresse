@@ -24,7 +24,7 @@ board2 = Board.create!({ name: 'dogs', description: '', user_id: user1.id })
 # 
 
 pin1 = Pin.new({ title: 'dog1', description: 'doggy', user_id: demo.id, board_id: board1.id })
-# file = open('s3://active-storage-puntiresse-dev/8yjd8BxKMywSREfkCMZmEazj')
+# file = open('https://active-storage-puntiresse-dev.s3.us-east-1.amazonaws.com/8yjd8BxKMywSREfkCMZmEazj')
 file = open('https://www.dogbreedinfo.com/images16/NewfoundlandsSatchelJack.JPG')
 pin1.photo.attach(io: file, filename: 'dogTest1.jpg')
 pin1.save!

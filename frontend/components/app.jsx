@@ -17,8 +17,8 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupFormContainer} />
         </header>
             <Switch>
-                {/* <ProtectedRoute path='/' component={PinCreateFormContainer} /> */}
-                <ProtectedRoute exact path='/' component={PinIndexContainer} />
+                <ProtectedRoute exact path='/create-pin' component={PinCreateFormContainer} />
+                <ProtectedRoute exact path='/home' component={PinIndexContainer} />
                 <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer} />
             </Switch>  
             

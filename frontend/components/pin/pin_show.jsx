@@ -34,22 +34,22 @@ class PinShow extends React.Component {
         this.currentPin = {
             pin: {
                 title: this.props.pin.title,
-                link: this.props.pin.url,
+                url: this.props.pin.url,
                 description: this.props.pin.description,
                 copiedPinId: this.props.pin.id,
-                board_id: 1
+                board_id: 28
             }
         }
 
         if (this.state.redirectToIndex) {
             return (
-                <Redirect to="/" />
+                <Redirect to="/home" />
             )
         }
 
         return (
             <div className="" >
-                <Link to='/'>
+                <Link to='/home'>
                     <div className="">
                         <i className=""></i>
                     </div>
