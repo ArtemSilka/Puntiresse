@@ -5,10 +5,10 @@ class PinShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirectToIndex: false
+            toIndex: false
         }
 
-        this.redirectToIndex = this.redirectToIndex.bind(this);
+        this.toIndex = this.toIndex.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.currentPin;
 
@@ -18,14 +18,14 @@ class PinShow extends React.Component {
         this.props.fetchPin(this.props.match.params.pinId);
     }
 
-    redirectToIndex() {
-        this.setState({ redirectToIndex: true })
+    toIndex() {
+        this.setState({ toIndex: true })
     }
 
     handleSave(e) {
         e.preventDefault();
         this.props.savePin(this.currentPin)
-            .then(this.redirectToIndex())
+            .then(this.toIndex())
     }
 
     render() {
@@ -41,7 +41,7 @@ class PinShow extends React.Component {
             }
         }
 
-        if (this.state.redirectToIndex) {
+        if (this.state.toIndex) {
             return (
                 <Redirect to="/home" />
             )

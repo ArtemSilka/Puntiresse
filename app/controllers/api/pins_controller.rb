@@ -29,7 +29,9 @@ class Api::PinsController < ApplicationController
 
     def update
         @pin = Pin.find(params[:id])
-        if (@pin.user_id === current_user.id && @pin.update(pin_params))
+        # change after users
+        # if (@pin.user_id == current_user.id && @pin.update(pin_params))
+        if @pin.update(pin_params)
             render 'api/pins/show'
         else
             render json: @pin.errors.full_messages, status: 422
@@ -44,7 +46,7 @@ class Api::PinsController < ApplicationController
     private
 
     def pin_params
-        params.require(:pin).permit(:title, :description, :url, :user_id, :board_id, :photo)
-        # params.require(:pin).permit(:title, :description, :url, :photo)
+        # params.require(:pin).permit(:title, :description, :url, :user_id, :board_id, :photo, :id, :photoUrl, :toShow, :toIndex)
+        params.require(:pin).permit(:title, :description, :url, :photo)
     end
 end

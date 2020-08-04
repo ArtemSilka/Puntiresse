@@ -40,8 +40,10 @@ export default ({ currentUser, logout }) => {
                             </div>
                         </div>
                         </Link>
+
+                        {/* FUTURE */}
                         {/* Today */}
-                        <div className="Eh fv rI LS pya a_A">
+                        {/* <div className="Eh fv rI LS pya a_A">
                             <div className="EY rI fv Xa po na">
                                 <div className="Eh rU No m8 rI LS che">
                                     <div className="ES oF Je t7 mW ">
@@ -49,9 +51,9 @@ export default ({ currentUser, logout }) => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Following */}
-                        <div className="Eh fv rI LS pya a_A">
+                        {/* <div className="Eh fv rI LS pya a_A">
                             <div className="EY rI fv Xa po na">
                                 <div className="Eh rU No m8 rI LS che">
                                     <div className="ES oF Je t7 mW ">
@@ -59,7 +61,7 @@ export default ({ currentUser, logout }) => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         
                         {/* Search */}
                         <div className="uU wYR zI7 rI LS thi">

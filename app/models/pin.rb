@@ -18,11 +18,15 @@ class Pin < ApplicationRecord
 
     belongs_to :user,
         foreign_key: :user_id,
-        class_name: :User
+        class_name: :User,
+        # remove after users
+        optional: true
 
     belongs_to :board,
         foreign_key: :board_id,
-        class_name: :Board
+        class_name: :Board,
+        # remove after boards
+        optional: true
 
     has_many :board_pins,
         foreign_key: :pin_id,

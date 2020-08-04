@@ -13,8 +13,8 @@ class CreatePinForm extends React.Component {
             photoFile: null,
             photoUrl: null,
             errors: this.props.errors,
-            redirectToShow: false,
-            redirectId: null
+            toShow: false,
+            toIndex: null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +40,7 @@ class CreatePinForm extends React.Component {
             .then(
                 response => {
 
-                    this.setState({ redirectToShow: true, redirectId: response.pin.id }),
+                    this.setState({ toShow: true, toIndex: response.pin.id }),
                         (err) => {
                             this.setState({ errors: this.renderErrors() })
                         }
@@ -76,20 +76,24 @@ class CreatePinForm extends React.Component {
     render() {
         const imagePreview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 
-        if (this.state.redirectToShow) {
+        if (this.state.toShow) {
 
             return (
-                <Redirect to={`/pins/${this.state.redirectId}`} />
+                <Redirect to={`/pins/${this.state.toIndex}`} />
             )
         }
 
         const display = !imagePreview ? 'display-none' : '';
 
         return (
-            <div className="">
-                <div className="">
 
-                    <div className="">
+            // <div className="modal-box-container hek">
+            //     <div className="modal-box1 oF">
+            //         <div className="box"></div>
+            <div className="modal-box-container hek">
+                <div className="modal-box1 oF">
+
+                    <div className="box">
                         <form onSubmit={this.handleSubmit} className="">
                             <div className="">
                                 <div className="">Select</div>

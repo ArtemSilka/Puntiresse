@@ -10,16 +10,16 @@ class EditPinForm extends React.Component {
             id: '',
             photoUrl: '',
             url: '',
-            redirectToShow: false,
-            redirectToIndex: false
+            toShow: false,
+            toIndex: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
-        this.redirectToShow = this.redirectToShow.bind(this);
+        this.toShow = this.toShow.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchPin(this.props.pinId)
+        this.props.fetchPin(this.props.pin.id)
             .then(this.setState({
                 title: this.props.pin.title,
                 description: this.props.pin.description,
@@ -30,10 +30,6 @@ class EditPinForm extends React.Component {
 
     }
 
-    componentDidUpdate(prevProps) {
-    
-    }
-
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
@@ -41,29 +37,29 @@ class EditPinForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updatePin(this.state)
-            .then(this.setState({ redirectToShow: true }));
+            .then(this.setState({ toShow: true }));
     }
 
     handleDelete(e) {
         this.props.deletePin(this.props.pin.id)
-            .then(this.setState({ redirectToIndex: true }));
+            .then(this.setState({ toIndex: true }));
     }
 
-    redirectToShow(e) {
+    toShow(e) {
         e.preventDefault();
-        this.setState({ redirectToShow: true });
+        this.setState({ toShow: true });
     }
 
     render() {
         if (!this.props.pin) return null;
 
-        if (this.state.redirectToShow) {
+        if (this.state.toShow) {
             return (
                 <Redirect to={`/pins/${this.props.pin.id}`} />
             )
         }
 
-        if (this.state.redirectToIndex) {
+        if (this.state.toIndex) {
             return (
                 <Redirect to='/home' />
             )
@@ -79,19 +75,30 @@ class EditPinForm extends React.Component {
                         </div>
 
 
-                        <form onSubmit={this.handleSubmit} className="edit-pin-form">
+                        <form onSubmit={this.handleSubmit} className="">
                             <div className="box-body">
                                 <div className="">
                                     <div className="hix">
                                         <div>Title</div>
                                         <div className="form1">
-                                            <input type="text" className="einp wyq oF" value={this.state.title || ''} placeholder="Title" onChange={this.update('title')} />
+                                            <input 
+                                                type="text" 
+                                                className="einp wyq oF" 
+                                                value={this.state.title || ''} 
+                                                placeholder="Title" 
+                                                onChange={this.update('title')} 
+                                                />
                                         </div>
                                     </div>
                                     <hr/>
                                     <div className="hix">
                                         <div>Description</div>
-                                        <textarea className="einp wyq oF hhe" value={this.state.description || ''} placeholder="Description" onChange={this.update('description')} />
+                                        <textarea 
+                                            className="einp wyq oF hhe" 
+                                            value={this.state.description || ''} 
+                                            placeholder="Description" 
+                                            onChange={this.update('description')} 
+                                            />
                                     </div>
                                 </div>
                                 <div className="">
