@@ -51,7 +51,14 @@ class PinShow extends React.Component {
             <div className="" >
                 <Link to='/home'>
                     <div className="">
-                        <i className=""></i>
+                        <i className="">HOME</i>
+                    </div>
+                </Link>
+                <Link to={`/pins/${this.props.pin.id}/edit`}>
+                    <div className="" 
+                    // onClick={() => this.props.openModal(this.props.pin.id)}
+                    >
+                        <i className="">EDIT</i>
                     </div>
                 </Link>
                 <div className="">
