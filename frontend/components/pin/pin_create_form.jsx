@@ -4,8 +4,9 @@ import { Link, Redirect } from 'react-router-dom';
 class CreatePinForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = {
-            user_id: currentUser.id,
+            user_id: props.currentUser.id,
             board_id: 28,
             title: '',
             description: '',
@@ -65,6 +66,7 @@ class CreatePinForm extends React.Component {
     }
 
     renderErrors() {
+        debugger
         const allErrors = this.props.errors.map((error, i) => (
             <li key={i}>{error}</li>
         ));
@@ -88,6 +90,7 @@ class CreatePinForm extends React.Component {
         return (
 
             <div className="modal-box-container hek">
+                {this.renderErrors()}
                 <div className="modal-box1 oF">
 
                     <div className="box">

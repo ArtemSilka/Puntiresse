@@ -40,7 +40,7 @@ class Pin < ApplicationRecord
 
     def ensure_photo
     unless self.photo.attached?
-      errors[:photo] << "An image is required to create a Pin."
+      errors[:photo] << "is required to create a Pin."
     end
   end
 
