@@ -1,0 +1,76 @@
+.bic {
+  width: 300px;
+  height: 264px;
+  text-align: left;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.bic:hover {
+  filter: brightness(90%);
+}
+
+.bii {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+
+.bii div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bii > img,
+.bii > div {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  margin-right: 2px;
+}
+
+.bii div > img,
+.bii div > div {
+  width: 100%;
+  height: calc(50% - 1px);
+  object-fit: cover;
+}
+
+.mb {
+   margin-bottom: 2px; 
+}
+
+.brr {
+    border-radius: 0 12px 0 0;
+}
+
+.brb {
+    border-radius: 0 0 12px 0;
+}
+
+.bfb {
+    background-color: white;
+    filter: brightness(90%);
+    border-color: transparent;
+}
+
+.bit {
+  font-size: 20px;
+  padding-top: 12px;
+  padding-left: 8px;
+}
+
+.hhh {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.f12 {
+  font-size: 12px;
+}

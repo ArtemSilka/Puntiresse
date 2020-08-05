@@ -8,14 +8,12 @@ json.pins @user.pins.each do |pin|
   end
 end
 
-# change after boards
-
-# json.boards @user.boards.each do |board|
-#   json.set! board.id do 
-#     json.extract! board, :id, :title, :description, :user_id
-#     json.pins board.pins.each do |pin|
-#         json.extract! pin, :id, :title, :description, :user_id, :board_id
-#         json.photoUrl url_for(pin.photo)
-#     end
-#   end
-# end
+json.boards @user.boards.each do |board|
+  json.set! board.id do 
+    json.extract! board, :id, :name, :description, :user_id
+    json.pins board.pins.each do |pin|
+        json.extract! pin, :id, :title, :description, :user_id, :board_id
+        json.photoUrl url_for(pin.photo)
+    end
+  end
+end
