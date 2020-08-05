@@ -2,10 +2,12 @@ import { connect } from "react-redux";
 import EditProfileForm from "./edit_profile";
 import { updateUser } from "../../actions/user_actions";
 
-const msp = state => ({
+const msp = state => { 
+    // debugger
+    return {
     errors: state.errors.user,
-    currentUser: state.entities.users[state.session.id]
-});
+    currentUser: state.session.currentUser
+}};
 
 const mdp = dispatch => ({
     updateUser: (user) => dispatch(updateUser(user))

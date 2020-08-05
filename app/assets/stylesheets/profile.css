@@ -40,8 +40,14 @@
     color: graytext;
     pointer-events: none;
     /* color: #8e8e8e; */
+    
 }
 
 #disabled {
+  color: white;
+}
+
+.sld {
+  background-color: black;
   color: white;
 }

@@ -85,7 +85,7 @@ export default ({ currentUser, logout }) => {
                         <div className="rU No zI7 rI LS">
                             {/* Profile */}
                             {/* <Link to={`/users/${currentUser.email.slice(0, currentUser.email.indexOf('@'))}/boards`}> */}
-                            <Link to={`/users/${currentUser.id}/boards`}>
+                            <Link to={`/users/${currentUser.id}/pins`}>
                                 <div className="zI7 rI LS">
                                     <div className="d zI7 rI LS fou">
                                         {/* <a className="rI fif"> */}

@@ -5,16 +5,18 @@ import { Link, NavLink } from "react-router-dom";
 class EditProfile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this._getInitialState();
+        // debugger
+        this.state = this.currentState();
 
-        this._getInitialState = this._getInitialState.bind(this);
+        this.currentState = this.currentState.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
         this.handleDone = this.handleDone.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
 
-    _getInitialState() {
-        const user = currentUser;
+    currentState() {
+        // debugger
+        const user = this.props.currentUser;
         const initialState = Object.assign({}, {
             id: user.id,
             email: user.email,
@@ -26,12 +28,16 @@ class EditProfile extends React.Component {
     }
 
     handleCancel(e) {
+        // debugger
+        const s = this.currentState();
         e.preventDefault();
-        this.setState(this._getInitialState);
+        this.setState(this.currentState);
+        this.props.history.push(`/users/${s.id}/pins`)
     }
 
     handleDone(e) {
         e.preventDefault();
+        const s = this.currentState();
         const details = Object.assign({}, this.state);
         delete details["id"];
         delete details["photoPreview"];
@@ -46,6 +52,7 @@ class EditProfile extends React.Component {
         this.props.updateUser(formData, this.state.id).then(
             () => location.reload(false)
         )
+        this.props.history.push(`/users/${s.id}/pins`)
     }
 
     handleFile(e) {
@@ -67,20 +74,20 @@ class EditProfile extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         const profilePhoto = (this.state.photo) ? (
-            <img src={this.state.photo} className="epp" />
+            <img src={this.state.photo} className="h" />
         ) : (
             <img src={"https://s.pinimg.com/images/user/default_280.png"} />
         );
         const displayPhoto = (this.state.photoPreview) ? (
-            <img src={this.state.photoPreview} className="epp" />
+            <img src={this.state.photoPreview} className="h" />
         ) : (
             profilePhoto
         );
 
         let currentState = Object.assign({}, this.state);
-        const disabled = (JSON.stringify(currentState) === JSON.stringify(this._getInitialState())) ? "disabled" : "";
+        const disabled = (JSON.stringify(currentState) === JSON.stringify(this.currentState())) ? "disabled" : "";
         return (
             <div id="settings">
                 <div id="settings-container">
@@ -102,7 +109,6 @@ class EditProfile extends React.Component {
                                             <div className="epbc">
                                                 <div className="epb">
                                                     <div className="Gd kN em IL rI LS">
-                                                        <Link to={`/users/${currentState.id}/boards`}>
                                                             <button 
                                                                 className={`Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI ${disabled}`} 
                                                                 onClick={this.handleCancel}>
@@ -110,16 +116,13 @@ class EditProfile extends React.Component {
                                                                     <span id={`${disabled}`} className="grey">Cancel</span>
                                                                     </div>
                                                             </button>
-                                                        </Link>
                                                     </div>
                                                     <div className="Gd kN em IL rI LS">
-                                                        <Link to={`/users/${currentState.id}/boards`}>
                                                         <button 
                                                             className={`Ia LS US ad EY Zc Z3 hA- si lg na po eD rI ${disabled}`} 
                                                             onClick={this.handleDone}>
                                                                 <div className="ES oF Je tR t7 mW">Done</div>
                                                         </button>
-                                                        </Link>
                                                     </div>
 
                                                 </div>

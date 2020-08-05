@@ -30,7 +30,7 @@ const App = () => (
         </header>
             <Switch>
                 <ProtectedRoute exact path="/settings" component={EditProfileContainer} />
-                <ProtectedRoute exact path='/users/:userId/boards' component={ProfileContainer} />
+                <ProtectedRoute exact path='/users/:userId/pins' component={ProfileContainer} />
                 <ProtectedRoute exact path='/create-pin' component={PinCreateFormContainer} />
                 <ProtectedRoute exact path='/home' component={PinIndexContainer} />
                 <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer} />

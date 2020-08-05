@@ -95,7 +95,7 @@ class Profile extends React.Component {
                             </Link>
                             <Link to={`/users/${user.id}/pins`}>
                             <div className="Eh fv rI LS pya a_A">
-                                <div className="EY rI fv Xa po na">
+                                <div className="EY rI fv Xa po na sld">
                                     <div className="Eh rU No m8 rI LS che">
                                         <div className="ES oF Je t7 mW ">
                                             Pins
