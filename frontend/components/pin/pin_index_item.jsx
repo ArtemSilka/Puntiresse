@@ -5,11 +5,11 @@ const PinIndexItem = ({ pin }) => {
 
     return (
         <Link to={`/pins/${pin.id}`}>
-            <div className='pin-container'>
-                <div className='pin-box'>
+            <div className='pin-index-item-container'>
+                <div className='pin-index-item-image'>
                     <img src={pin.photoUrl} alt={pin.title} />
                 </div>
-                <div className='pin-title'>{pin.title}</div>
+                <div className='pin-index-item-title oF'>{pin.title}</div>
             </div>
         </Link>
     )

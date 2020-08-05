@@ -5,7 +5,7 @@ class CreatePinForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user_id: 55,
+            user_id: currentUser.id,
             board_id: 28,
             title: '',
             description: '',
@@ -87,9 +87,6 @@ class CreatePinForm extends React.Component {
 
         return (
 
-            // <div className="modal-box-container hek">
-            //     <div className="modal-box1 oF">
-            //         <div className="box"></div>
             <div className="modal-box-container hek">
                 <div className="modal-box1 oF">
 

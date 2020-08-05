@@ -4,7 +4,8 @@ import { createPin } from '../../actions/pin_actions';
 import CreatePinForm from './pin_create_form';
 
 const msp = state => ({
-    errors: Object.values(state.errors.pins)
+    errors: Object.values(state.errors.pins),
+    currentUser: state.session.currentUser
 });
 
 const mdp = dispatch => ({

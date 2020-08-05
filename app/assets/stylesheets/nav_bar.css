@@ -49,6 +49,7 @@ h3{margin:0;}
 .ele{padding:0 0 0 16px;height:100%}
 .tw4{padding-left: 4px;padding-right: 26px;}
 .tw7{padding-right: 30px;}
+.yQa{padding:25px;}
 .yQo{padding:0;}
 .wYR{padding-left:8px;padding-right:8px;}
 
@@ -69,7 +70,8 @@ h3{margin:0;}
 .tw1{height:30px;width:30px}
 .tw2{width:24px;height:24px}
 .tw5{height:24px;width:24px}
-.tw6{height:40px;width:40px;background-color: ;}
+.tw6{height:40px;width:40px}
+.tw8{height:100px;width:100px}
 img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
 button,input{line-height:normal;}
 .po{width:100%;}

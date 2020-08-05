@@ -84,24 +84,27 @@ export default ({ currentUser, logout }) => {
                         {/* right */}
                         <div className="rU No zI7 rI LS">
                             {/* Profile */}
-                            <div className="zI7 rI LS">
-                                <div className="d zI7 rI LS fou">
-                                    <a className="rI fif">
-                                        <div className="d rU No m8 zI7 rI LS six a_A">
-                                            <div className="d rU No m8 zI7 rI LS tw1">
-                                                <div className="d XG qJc zI7 rI LS tw2">
-                                                    <div className="Pj7 sLG XG d m1e">
-                                                        <div className="XG zI7 rI LS tw3">
-                                                            <img className="hCL eD po MIw" src={window.profileURL}/>
+                            {/* <Link to={`/users/${currentUser.email.slice(0, currentUser.email.indexOf('@'))}/boards`}> */}
+                            <Link to={`/users/${currentUser.id}/boards`}>
+                                <div className="zI7 rI LS">
+                                    <div className="d zI7 rI LS fou">
+                                        {/* <a className="rI fif"> */}
+                                            <div className="d rU No m8 zI7 rI LS six a_A">
+                                                <div className="d rU No m8 zI7 rI LS tw1">
+                                                    <div className="d XG qJc zI7 rI LS tw2">
+                                                        <div className="Pj7 sLG XG d m1e">
+                                                            <div className="XG zI7 rI LS tw3">
+                                                            <img className="hCL eD po MIw" src={"https://s.pinimg.com/images/user/default_280.png"}/>
+                                                            </div>
+                                                            <div className="KPc MIw ojN Rym p6V QLY"></div>
                                                         </div>
-                                                        <div className="KPc MIw ojN Rym p6V QLY"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        {/* </a> */}
+                                    </div>
                                 </div>
-                            </div>
+                            </Link> 
 
                             {/* dropdown */}
                             <div className="zI7 rI LS tw7">
