@@ -20,7 +20,7 @@ const BoardIndexItem = ({ board }) => {
     )
 
     return (
-        <div className='bic'>
+        <div className='bic board-index-item-container'>
             <Link to={`/users/${board.user_id}/boards/${board.id}`}>
                 <div className='bii'>
                     {photoPreview1}

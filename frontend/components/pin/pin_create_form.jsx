@@ -94,7 +94,7 @@ debugger
                 <div className="modal-box1 oF">
 
                     <div className="box">
-                        <form onSubmit={this.handleSubmit} className="">
+                        <form onSubmit={this.handleSubmit} className="form1">
                             <div className="">
                                 <div className="">Select</div>
                                 <input className="" type="submit" value="Save" />

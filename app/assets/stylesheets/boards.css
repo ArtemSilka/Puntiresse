@@ -1,6 +1,6 @@
 .bic {
   width: 300px;
-  height: 264px;
+  height: 245px;
   text-align: left;
   background-color: white;
   border-radius: 12px;
@@ -78,4 +78,10 @@
 .fa {
   flex-direction: column;
   align-items: center;
+}
+
+.board-index-item-container {
+  display: inline-block;
+  margin-bottom: 18px;
+  margin-right: 45px;
 }

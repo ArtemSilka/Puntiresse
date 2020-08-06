@@ -24,7 +24,7 @@ const create = () => (
                     </Link>
                 </li>
                 <li>
-                    <Link className="add-button" to="/create-pin" >
+                    <Link className="add-button" to="/create-board" >
                         <div className="pad">
                             <img src="https://img.icons8.com/metro/26/000000/plus-math.png" height="13" width="13" />
                         </div>

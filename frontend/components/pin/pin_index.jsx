@@ -1,6 +1,5 @@
 import React from 'react'
 import PinIndexItem from './pin_index_item';
-import { Link } from 'react-router-dom';
 import create from '../create_button'
 
 class PinIndex extends React.Component {
