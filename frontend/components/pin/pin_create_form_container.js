@@ -3,10 +3,12 @@ import { withRouter } from 'react-router-dom';
 import { createPin } from '../../actions/pin_actions';
 import CreatePinForm from './pin_create_form';
 
-const msp = state => ({
+const msp = state => {
+    return {
     errors: Object.values(state.errors.pins),
-    currentUser: state.session.currentUser
-});
+    currentUser: state.session.currentUser,
+    boards: Object.values(state.entities.boards)
+}};
 
 const mdp = dispatch => ({
     createPin: pin => dispatch(createPin(pin))

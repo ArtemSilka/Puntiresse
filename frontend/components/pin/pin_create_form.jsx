@@ -7,7 +7,7 @@ class CreatePinForm extends React.Component {
         // debugger
         this.state = {
             user_id: props.currentUser.id,
-            board_id: 28,
+            board_id: '',
             title: '',
             description: '',
             url: '',
@@ -26,7 +26,7 @@ class CreatePinForm extends React.Component {
         e.preventDefault();
 
         const formData = new FormData();
-
+debugger
         formData.append('pin[board_id]', this.state.board_id);
         formData.append('pin[user_id]', this.state.user_id);
         

@@ -22,6 +22,15 @@ class PinShow extends React.Component {
         this.setState({ toIndex: true })
     }
 
+    handleSelect(e) {
+
+        e.preventDefault();
+        let selected = document.getElementsByClassName("select")[0];
+        let board = e.currentTarget;
+        selected.innerText = board.innerText;
+
+    }
+
     handleSave(e) {
         e.preventDefault();
         this.props.savePin(this.currentPin)
@@ -30,13 +39,14 @@ class PinShow extends React.Component {
 
     render() {
         if (!this.props.pin) return null;
-
+// debugger
         this.currentPin = {
             pin: {
                 title: this.props.pin.title,
                 url: this.props.pin.url,
                 description: this.props.pin.description,
-                copiedPinId: this.props.pin.id,
+                // copiedPinId: this.props.pin.id,
+                // change after boards
                 board_id: 28
             }
         }
@@ -46,6 +56,10 @@ class PinShow extends React.Component {
                 <Redirect to="/home" />
             )
         }
+// debugger
+        // const boardTitles = currentUser.boards.map((board, idx) => {
+        //     return <div className="" onClick={this.handleSelect} key={this.props.boards[0].id}>{this.props.boards[0].title}</div>;
+        // })
 
         return (
             <div className="" >
@@ -75,7 +89,7 @@ class PinShow extends React.Component {
                                         </Link>
                                     </div>
                                     <div className="">
-                                        <div className="">Select</div>
+                                        <div className="select">Select</div>
                                         <button onClick={this.handleSave} className="">Save</button>
                                     </div>
                                 </div>

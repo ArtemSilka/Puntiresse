@@ -18,6 +18,7 @@ import PinEditFormContainer from './pin/pin_edit_form_container';
 
 import Modal from './modal/modal';
 import BoardIndexContainer from "./board/board_index_container";
+import BoardShowContainer from "./board/board_show_container";
 
 
 
@@ -37,6 +38,7 @@ const App = () => (
                 <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer} />
                 <ProtectedRoute exact path="/pins/:pinId/edit" component={PinEditFormContainer} />
                 <ProtectedRoute exact path='/users/:userId/boards' component={BoardIndexContainer} />
+                <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShowContainer} />
             </Switch>  
             <Modal />
     </div>
