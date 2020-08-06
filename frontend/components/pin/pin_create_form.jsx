@@ -26,7 +26,7 @@ class CreatePinForm extends React.Component {
         e.preventDefault();
 
         const formData = new FormData();
-debugger
+// debugger
         formData.append('pin[board_id]', this.state.board_id);
         formData.append('pin[user_id]', this.state.user_id);
         
@@ -71,12 +71,20 @@ debugger
             <li key={i}>{error}</li>
         ));
         return (
-            <ul>{allErrors}</ul>
+            <div className="err1">
+                <div className="err2 oF">
+                    <span>{allErrors}</span>
+                </div>
+            </div>
         )
     }
 
     render() {
-        const imagePreview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+        const imagePreview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : (
+            <div className="df">
+                <img id="photo" className="w1" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698648-icon-130-cloud-upload-512.png" />
+            </div>
+        );
 
         if (this.state.toShow) {
 
@@ -90,54 +98,43 @@ debugger
         return (
 
             <div className="modal-box-container hek">
-                {this.renderErrors()}
+                
                 <div className="modal-box1 oF">
-
                     <div className="box">
                         <form onSubmit={this.handleSubmit} className="form1">
-                            <div className="">
-                                <div className="">Select</div>
-                                <input className="" type="submit" value="Save" />
+                            <div className="_O1 jcfe">
+                                <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI wa">
+                                    <div className="ES oF Je tR t7 mW">
+                                        <span className="oF">Save</span>
+                                    </div>
+                                </button>
                             </div>
-
-                            <div className="">
-
-                                <div className="">
-                                    <input type="file" className="" id={display} onChange={this.handleFile} />
-                                    {imagePreview}
-                                </div>
-                            </div>
-
-                            <div className="">
-                                <div className="">
-                                    <textarea className=""
-                                        placeholder="Add your title"
-                                        value={this.state.title}
-                                        onChange={this.update('title')} />
+                            <div className="oF fv df miw">
+                                
+                                <div className="pl w1">
+                                    <div className="uploader w1 _O1 m8 No LS XG sLG sax mmm">
+                                        <input type="file" id="filePhoto" onChange={this.handleFile} />
+                                        {imagePreview}    
+                                    </div>
                                 </div>
 
-                                <div className="">
-                                    <textarea className=""
-                                        placeholder="Tell everyone what your Pin is about"
-                                        value={this.state.description}
-                                        onChange={this.update('description')}
-                                    />
+                                <div className="w1">
+                                    <div className="pl pt">
+                                            <input className="einp wyq oF kN"
+                                                placeholder="Add your title"
+                                                value={this.state.title}
+                                                onChange={this.update('title')} />
+                                            <textarea 
+                                                className="einp wyq oF w1 w2"
+                                                row="5"
+                                                placeholder="Tell everyone what your Pin is about"
+                                                value={this.state.description}
+                                                onChange={this.update('description')}
+                                            />
+                                        {this.renderErrors()}
+                                    </div>
                                 </div>
                             </div>
-
-                            <div className="">
-                            </div>
-
-                            <div className="">
-                                <div className="">
-                                    <textarea className=""
-                                        placeholder="Add a destination url"
-                                        value={this.state.url}
-                                        onChange={this.update('url')}
-                                    />
-                                </div>
-                            </div>
-
                         </form>
                     </div>
                 </div>

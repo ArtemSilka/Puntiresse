@@ -68,6 +68,11 @@
     width: 850px;
 }
 
+.hEk {
+    min-height: none;
+    width: 820px;
+}
+
 .huk {
     width: 200px;
     display: flex;
