@@ -86,3 +86,39 @@
     column-count: 7;
   }
 }
+
+.hui {
+  justify-content: flex - start;
+  padding: 20px;
+}
+
+.hhu {
+  min-width: auto;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.281);
+}
+
+.mmm {
+  border-radius: 20px;
+  margin: 10px;
+  min-width: 200px;
+  max-width: 600px;
+  min-height: 40px;
+}
+
+.nnn {
+  padding: 20px;
+  height: auto;
+  max-width: 600px;
+  /* justify-content: space-evenly; */
+  align-items: flex-start;
+  z-index: 10;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.muu {
+  font-size: 12px;
+}

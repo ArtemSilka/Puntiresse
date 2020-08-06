@@ -94,7 +94,7 @@ export default ({ currentUser, logout }) => {
                                                     <div className="d XG qJc zI7 rI LS tw2">
                                                         <div className="Pj7 sLG XG d m1e">
                                                             <div className="XG zI7 rI LS tw3">
-                                                            <img className="hCL eD po MIw" src={"https://s.pinimg.com/images/user/default_280.png"}/>
+                                                                <img className="hCL eD po MIw" src={"https://s.pinimg.com/images/user/default_280.png"}/>
                                                             </div>
                                                             <div className="KPc MIw ojN Rym p6V QLY"></div>
                                                         </div>

@@ -67,7 +67,7 @@ class ProfileBoardIndex extends React.Component {
                     </div>
 
                     <div className="user-container _O1 m8">
-                        <span className="name oF">{user.email}</span>
+                        <span className="name oF">{user["email"].split('@')[0]}</span>
                     </div>
                     <div className='profile-links'>
                         <div className=''>
