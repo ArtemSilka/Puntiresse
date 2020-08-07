@@ -60,6 +60,8 @@ class PinShow extends React.Component {
         // const boardTitles = currentUser.boards.map((board, idx) => {
         //     return <div className="" onClick={this.handleSelect} key={this.props.boards[0].id}>{this.props.boards[0].title}</div>;
         // })
+
+        // debugger
         return (
             <div className="_O1 fa po ephb hui" >
                 {create()}
@@ -108,7 +110,7 @@ class PinShow extends React.Component {
                                     </p>
                                 </div>
                                 <div>
-                                    <Link to={`/users/${this.props.userId}/pins`}>
+                                    <Link to={`/users/${this.props.pin.photo.record.user_id}/pins`}>
                                         <div className="zI7 rI LS">
                                             <div className="d zI7 rI LS fou">
                                                 <div className="d rU No zI7 rI LS">
@@ -121,9 +123,9 @@ class PinShow extends React.Component {
                                                                     </div>
                                                                     <div className="KPc MIw ojN Rym p6V QLY"></div>
                                                                 </div>
-                                                                <div className="muu oF">
+                                                                {/* <div className="muu oF">
                                                                     {this.props.user["email"].split('@')[0]}
-                                                                </div> 
+                                                                </div>  */}
                                                             </div>
                                                         </div>
                                                     </div>
