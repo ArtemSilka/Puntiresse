@@ -5,7 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 class EditProfile extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         this.state = this.currentState();
 
         this.currentState = this.currentState.bind(this);
@@ -15,7 +14,6 @@ class EditProfile extends React.Component {
     }
 
     currentState() {
-        // debugger
         const user = this.props.currentUser;
         const initialState = Object.assign({}, {
             id: user.id,
@@ -28,7 +26,6 @@ class EditProfile extends React.Component {
     }
 
     handleCancel(e) {
-        // debugger
         const s = this.currentState();
         e.preventDefault();
         this.setState(this.currentState);
@@ -74,7 +71,6 @@ class EditProfile extends React.Component {
     }
 
     render() {
-        // debugger
         const profilePhoto = (this.state.photo) ? (
             <img src={this.state.photo} className="h" />
         ) : (

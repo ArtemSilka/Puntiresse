@@ -4,7 +4,6 @@ import { Link, Redirect } from 'react-router-dom';
 class CreatePinForm extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         this.state = {
             user_id: props.currentUser.id,
             board_id: '',
@@ -26,7 +25,6 @@ class CreatePinForm extends React.Component {
         e.preventDefault();
 
         const formData = new FormData();
-// debugger
         formData.append('pin[board_id]', this.state.board_id);
         formData.append('pin[user_id]', this.state.user_id);
         
@@ -66,7 +64,6 @@ class CreatePinForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger
         const allErrors = this.props.errors.map((error, i) => (
             <li key={i}>{error}</li>
         ));
