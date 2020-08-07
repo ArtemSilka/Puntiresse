@@ -5,7 +5,6 @@ import create from '../create_button';
 class PinShow extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         this.state = {
             toIndex: false,
             userID: props.user.id
@@ -42,7 +41,6 @@ class PinShow extends React.Component {
 
     render() {
         if (!this.props.pin) return null;
-// debugger
         this.currentPin = {
             pin: {
                 title: this.props.pin.title,
@@ -59,7 +57,6 @@ class PinShow extends React.Component {
                 <Redirect to="/home" />
             )
         }
-// debugger
         // const boardTitles = currentUser.boards.map((board, idx) => {
         //     return <div className="" onClick={this.handleSelect} key={this.props.boards[0].id}>{this.props.boards[0].title}</div>;
         // })

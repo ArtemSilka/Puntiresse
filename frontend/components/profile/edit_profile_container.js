@@ -3,7 +3,6 @@ import EditProfileForm from "./edit_profile";
 import { updateUser } from "../../actions/user_actions";
 
 const msp = state => { 
-    // debugger
     return {
     errors: state.errors.user,
     currentUser: state.session.currentUser

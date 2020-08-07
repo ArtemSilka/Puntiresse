@@ -36,7 +36,6 @@ class Profile extends React.Component {
         ) : (
             <img className="hCL eD po MIw Xa" src={"https://s.pinimg.com/images/user/default_280.png"} />
         );
-// debugger
         return (
 
             <div>
