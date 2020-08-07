@@ -90,7 +90,11 @@ class CreatePinForm extends React.Component {
             )
         }
 
-        const display = !imagePreview ? 'display-none' : '';
+        // const display = !imagePreview ? 'display-none' : '';
+
+        const showMenu = () => {
+            document.getElementById("drop").classList.toggle("show-menu")
+        }
 
         return (
 
@@ -100,6 +104,20 @@ class CreatePinForm extends React.Component {
                     <div className="box">
                         <form onSubmit={this.handleSubmit} className="form1">
                             <div className="_O1 jcfe">
+                                <div className="zI7 rI LS tw7">
+                                    <button className="rYa eD ad yQo EY qrs na" type="button">
+                                        <div className="x8f d _O1 No m8 OGJ YbY tw5 a_A" onClick={showMenu}>
+                                            SELECT BOARD
+                                        </div>
+                                        <div id="drop" className="menu-back" onClick={showMenu}>
+                                            <ul className="select-board oF mW" onClick={e => e.stopPropagation()}>
+                                                <li
+                                                // onClick={logout}
+                                                >Board1</li>
+                                            </ul>
+                                        </div>
+                                    </button>
+                                </div>
                                 <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI wa">
                                     <div className="ES oF Je tR t7 mW">
                                         <span className="oF">Save</span>
