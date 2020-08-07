@@ -32,28 +32,39 @@ class BoardCreateForm extends React.Component {
     render() {
 
         return (
-            <div className="edit-pin-container">
-                <div className="edit-form-box">
-                    <header className='edit-pin-header'>
-                        <h1>Create board</h1>
-                    </header>
-                    <form className='edit-pin-form'>
-                        <div className='edit-pin-info'>
-                            <div className="edit-pin-info-section">
-                                <label>Name</label>
-                                <textarea className='edit-pin-info-title' type="text" value={this.state.name} placeholder="Like Places to Go or Recipes to Make" onChange={this.update('name')} />
+
+            <div className="modal-box-container">
+
+                <div className="modal-box1 oF">
+                    <div className="box">
+                        <form onSubmit={this.handleSubmit} className="form1">
+                            <div className="_O1 jcfe">
+                                <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI wa">
+                                    <div className="ES oF Je tR t7 mW">
+                                        <span className="oF">Save</span>
+                                    </div>
+                                </button>
                             </div>
-                        </div>
-                    </form>
-                    <footer className="edit-pin-footer">
-                        <div className='edit-pin-footer-buttons'>
-                            <div></div>
-                            <div>
-                                <button onClick={this.props.closeModal} className='edit-pin-cancel'>Cancel</button>
-                                <button onClick={this.handleSubmit} className='edit-pin-save'>Create</button>
+                            <div className="oF fv df">
+                                <div className="w1">
+                                    <div className="pl pt">
+                                        <input className="einp wyq oF kN"
+                                            placeholder={`Like "Places to Go" or "Recipes to Make"`}
+                                            value={this.state.name}
+                                            onChange={this.update('name')} />
+                                        <textarea
+                                            className="einp wyq oF w1 w2"
+                                            row="5"
+                                            placeholder="What's your board about?"
+                                            value={this.state.description}
+                                            onChange={this.update('description')}
+                                        />
+                                        {/* {this.renderErrors()} */}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </footer>
+                        </form>
+                    </div>
                 </div>
             </div>
         )

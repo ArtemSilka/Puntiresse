@@ -19,7 +19,9 @@ class EditPinForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPin(this.props.pin.id)
+        debugger
+        // this.props.fetchPin(this.props.pin.id)
+        this.props.fetchPin(this.props.match.params.pinId)
             .then(this.setState({
                 title: this.props.pin.title,
                 description: this.props.pin.description,
@@ -80,7 +82,7 @@ class EditPinForm extends React.Component {
                                 <div className="">
                                     <div className="hix">
                                         <div>Title</div>
-                                        <div className="form1">
+                                        <div className="form1" id="#edit-form-width">
                                             <input 
                                                 type="text" 
                                                 className="einp wyq oF" 
@@ -94,6 +96,7 @@ class EditPinForm extends React.Component {
                                     <div className="hix">
                                         <div>Description</div>
                                         <textarea 
+                                            id="#edit-form-width"
                                             className="einp wyq oF hhe" 
                                             value={this.state.description || ''} 
                                             placeholder="Description" 
