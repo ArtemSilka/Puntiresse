@@ -25,7 +25,7 @@ import BoardCreateFormContainer from './board/board_create_form_container';
 
 
 const App = () => (  
-    <div className="sLG">
+    <div className="">
         <header>
             <Navbar />
             {/* <Landing /> */}
