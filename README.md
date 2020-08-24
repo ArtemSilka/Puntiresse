@@ -21,7 +21,7 @@ Puntiresse is a single page app inspired by Pinterest.
 - Demo login available
 
 <div align="center">
-  <img src="./app/assets/images/img2.png">
+  <img src="./app/assets/images/img2.gif">
 </div>
 
 ### Pins and Boards
