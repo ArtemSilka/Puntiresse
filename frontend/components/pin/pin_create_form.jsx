@@ -141,7 +141,7 @@ class CreatePinForm extends React.Component {
                                                 onChange={this.update('title')} />
                                             <textarea 
                                                 className="einp wyq oF w1 w2"
-                                                row="5"
+                                                // row="5"
                                                 placeholder="Tell everyone what your Pin is about"
                                                 value={this.state.description}
                                                 onChange={this.update('description')}

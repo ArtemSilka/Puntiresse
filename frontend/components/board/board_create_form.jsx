@@ -37,13 +37,6 @@ class BoardCreateForm extends React.Component {
                 <div className="modal-box1 oF">
                     <div className="box">
                         <form onSubmit={this.handleSubmit} className="form1">
-                            <div className="_O1 jcfe">
-                                <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI wa">
-                                    <div className="ES oF Je tR t7 mW">
-                                        <span className="oF">Save</span>
-                                    </div>
-                                </button>
-                            </div>
                             <div className="oF fv df">
                                 <div className="w1">
                                     <div className="pl pt">
@@ -61,6 +54,13 @@ class BoardCreateForm extends React.Component {
                                         {/* {this.renderErrors()} */}
                                     </div>
                                 </div>
+                            </div>
+                            <div className="_O1 jcfe ptr">
+                                <button className="Ia LS US ad EY Zc Z3 hA- si lg na po eD rI wa">
+                                    <div className="ES oF Je tR t7 mW">
+                                        <span className="oF">Create</span>
+                                    </div>
+                                </button>
                             </div>
                         </form>
                     </div>

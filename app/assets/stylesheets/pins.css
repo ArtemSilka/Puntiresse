@@ -109,7 +109,7 @@
 }
 
 .nnn {
-  padding: 20px;
+  padding: 20px 0;
   height: auto;
   max-width: 600px;
   /* justify-content: space-evenly; */
@@ -122,4 +122,19 @@
 
 .muu {
   font-size: 12px;
+}
+
+.pencil-show {
+  width: 20px;
+  border: white solid 10px;
+}
+
+.pencil-show:hover {
+  border: rgb(226, 226, 226) solid 10px;
+  border-radius: 25px;
+  background-color: rgb(226, 226, 226);
+}
+
+.ml10 {
+  margin-left: 10px;
 }

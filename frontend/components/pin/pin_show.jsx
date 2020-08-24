@@ -73,65 +73,26 @@ class PinShow extends React.Component {
 
                     <div className="po LS rU nnn">
                         <div className="">
-                            <div className="">
-                                <div>
+                            <div className="pencil-show">
                                     <Link to={`/pins/${this.props.pin.id}/edit`}>
-                                        <div className="zI7 rI LS">
-                                            <div className="d zI7 rI LS fou">
-                                                <div className="d rU No zI7 rI LS">
-                                                    <div className="d rU No zI7 rI LS tw1">
-                                                        <div className="d XG qJc zI7 rI LS tw2">
-                                                            <div className="Pj7 sLG XG d m1e">
-                                                                <div className="XG zI7 rI LS tw3">
-                                                                    <img className="hCL eD po MIw" src={"https://png.pngtree.com/png-vector/20190827/ourlarge/pngtree-pencil-icon-png-image_1713465.jpg"} />
-                                                                </div>
-                                                                <div className="KPc MIw ojN Rym p6V QLY"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png"/>
                                     </Link>
-                                </div>
                                 {/* fix savePin - select board_id */}
                                 {/* <div className="">
                                     <div className="select">Select</div>
                                     <button onClick={this.handleSave} className="">Save</button>
                                 </div> */}
                             </div>
-                            <div className="">
-                                <div className="">
+                            <div className="ml10">
                                     <h4 className="hA- Am mW oF">
                                         {this.props.pin.title}
                                     </h4>
                                     <p className="hA- muu oF">
-                                        {this.props.pin.description || 'Description'}
+                                        {this.props.pin.description || ''}
                                     </p>
-                                </div>
                                 <div>
                                     <Link to={`/users/${this.props.pin.photo.record.user_id}/pins`}>
-                                        <div className="zI7 rI LS">
-                                            <div className="d zI7 rI LS fou">
-                                                <div className="d rU No zI7 rI LS">
-                                                    <div className="d rU No  zI7 rI LS tw1">
-                                                        <div className="d XG qJc zI7 rI LS tw2">
-                                                            <div className="">
-                                                                <div className="Pj7 sLG XG d m1e">
-                                                                    <div className="XG zI7 rI LS tw3">
-                                                                        <img className="hCL eD po MIw" src={"https://s.pinimg.com/images/user/default_280.png"} />
-                                                                    </div>
-                                                                    <div className="KPc MIw ojN Rym p6V QLY"></div>
-                                                                </div>
-                                                                {/* <div className="muu oF">
-                                                                    {this.props.user["email"].split('@')[0]}
-                                                                </div>  */}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <img className="" src={"https://s.pinimg.com/images/user/default_280.png"} width="25px"/>
                                     </Link>
                                 </div>
                             </div>

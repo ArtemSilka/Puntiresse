@@ -51,3 +51,15 @@
   background-color: black;
   color: white;
 }
+
+.pencil {
+  margin-top: 20px;
+  margin-left: 25px;
+  border: white solid 10px;
+}
+
+.pencil:hover {
+  border: rgb(226, 226, 226) solid 10px;
+  border-radius: 25px;
+  background-color: rgb(226, 226, 226);
+}

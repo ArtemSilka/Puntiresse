@@ -28,17 +28,15 @@ export default ({ currentUser, logout }) => {
                         </div>
                         {/* Home */}
                         <Link to="/home">
-                        <div className="BF Eh fv rI LS pya">
-                            <div className="EY rI fv Xa po na">
-                                <div className="Eh rU No m8 rI LS che">
-                                    <div className="ES oF Je tR t7 mW">
-                                        Home
-                                        <div className="IL rI LS"></div>
-                                            <img src="" alt=""/>
+                            <div className="Eh fv rI LS pya a_A">
+                                <div className="EY rI fv Xa po na">
+                                    <div className="Eh rU No m8 rI LS che">
+                                        <div className="ES oF Je t7 mW ">
+                                            Home
+                                </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </Link>
 
                         {/* FUTURE */}
