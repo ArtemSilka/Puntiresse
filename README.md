@@ -20,25 +20,25 @@ Puntiresse is a single page app inspired by Pinterest.
 - Users must login/sign up to use app
 - Demo login available
 
-<!-- <div align="center">
+<div align="center">
   <img src="./app/assets/images/img2.png">
-</div> -->
+</div>
 
 ### Pins and Boards
 - Users can create/view pins
 - Users can edit pins
 - Users can create/view boards
 
-<!-- <div align="center">
-  <img src="./app/assets/images/img3.png">
-</div> -->
+<div align="center">
+  <img src="./app/assets/images/img3.gif">
+</div>
 
 ### Profile
 - Users can view/edit own profile
 
-<!-- <div align="center">
+<div align="center">
   <img src="./app/assets/images/img4.png">
-</div> -->
+</div>
 
 ## Future Plans
 - integerate search
