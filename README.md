@@ -1,24 +1,44 @@
-# README
+# Puntiresse
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Puntiresse is a single page app inspired by Pinterest.
 
-Things you may want to cover:
+[Visit the site](http://www.puntiresse.com/#/)
 
-* Ruby version
+<div align="center">
+  <img src="./app/assets/images/img1.png">
+</div>
 
-* System dependencies
+## Technologies
+* Ruby on Rails
+* React/Redux
+* JavaScript
+* AWS
 
-* Configuration
+## Features
 
-* Database creation
+### User Authentication
+- Users must login/sign up to use app
+- Demo login available
 
-* Database initialization
+<!-- <div align="center">
+  <img src="./app/assets/images/img2.png">
+</div> -->
 
-* How to run the test suite
+### Pins and Boards
+- Users can create/view pins
+- Users can edit pins
+- Users can create/view boards
 
-* Services (job queues, cache servers, search engines, etc.)
+<!-- <div align="center">
+  <img src="./app/assets/images/img3.png">
+</div> -->
 
-* Deployment instructions
+### Profile
+- Users can view/edit own profile
 
-* ...
+<!-- <div align="center">
+  <img src="./app/assets/images/img4.png">
+</div> -->
+
+## Future Plans
+- integerate search
