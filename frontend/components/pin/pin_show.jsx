@@ -76,9 +76,12 @@ class PinShow extends React.Component {
                     <div className="po LS rU nnn">
                         <div className="">
                             <div className="pencil-show">
-                                    <Link to={`/pins/${this.props.pin.id}/edit`}>
+                                <div onClick={() => this.props.openModal('edit-pin')}>
+                                    <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png" />
+                                </div>
+                                    {/* <Link to={`/pins/${this.props.pin.id}/edit`}>
                                         <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png"/>
-                                    </Link>
+                                    </Link> */}
                                 {/* fix savePin - select board_id */}
                                 {/* <div className="">
                                     <div className="select">Select</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
-class EditPinForm extends React.Component {
+class PinEditForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,8 @@ class EditPinForm extends React.Component {
 
     componentDidMount() {
         // this.props.fetchPin(this.props.pin.id)
-        this.props.fetchPin(this.props.match.params.pinId)
+        // this.props.fetchPin(this.props.match.params.pinId)
+        this.props.fetchPin(this.props.pin.id)
             .then(this.setState({
                 title: this.props.pin.title,
                 description: this.props.pin.description,
@@ -38,12 +39,15 @@ class EditPinForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updatePin(this.state)
-            .then(this.setState({ toShow: true }));
+            .then(this.props.closeModal());
     }
 
     handleDelete(e) {
         this.props.deletePin(this.props.pin.id)
-            .then(this.setState({ toIndex: true }));
+            .then(() => {
+                this.props.history.push(`/users/${currentUser.id}/pins`);
+                this.props.closeModal();
+            })
     }
 
     toShow(e) {
@@ -139,4 +143,4 @@ class EditPinForm extends React.Component {
     }
 }
 
-export default EditPinForm;
+export default PinEditForm;
