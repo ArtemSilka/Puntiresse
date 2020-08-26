@@ -61,7 +61,6 @@ class PinShow extends React.Component {
         //     return <div className="" onClick={this.handleSelect} key={this.props.boards[0].id}>{this.props.boards[0].title}</div>;
         // })
 
-        // debugger
         return (
             <div className="_O1 fa po ephb hui" >
                 {create()}

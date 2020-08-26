@@ -30,10 +30,8 @@ class Api::PinsController < ApplicationController
     def update
         @pin = Pin.find(params[:id])
         # change after users
-        # debugger
         # if (@pin.user_id == current_user.id && @pin.update(pin_params))
         if @pin.update(pin_params)
-        # debugger
             render 'api/pins/show'
         else
             render json: @pin.errors.full_messages, status: 422
