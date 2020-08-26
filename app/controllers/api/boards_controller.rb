@@ -39,7 +39,7 @@ class Api::BoardsController < ApplicationController
     def destroy
         board = current_user.boards.find(params[:id])
         board.destroy
-        render "api/boards/show"
+        # render "api/boards/show"
     end
 
     private

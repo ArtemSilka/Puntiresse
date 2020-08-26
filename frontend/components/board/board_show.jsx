@@ -40,29 +40,13 @@ class BoardShow extends React.Component {
                 <div className='profile'>
                     <div className="user-container _O1 m8 fa">
                         <div className='name oF'>{this.props.board[boardId].name}</div>
-                        <div className='name oF'>{this.props.board[boardId].description}</div>
+                        <div className='oF'>{this.props.board[boardId].description}</div>
                     </div>
                     <div className='profile-links'>
                         <div className=''>
-                            {/* <Link to={`/settings`}> */}
-                            {/* Change link to editBoardForm onClick modal after edit Board */}
-                                <div className="zI7 rI LS">
-                                    <div className="d zI7 rI LS fou">
-                                        <div className="d rU No m8 zI7 rI LS six a_A">
-                                            <div className="d rU No m8 zI7 rI LS tw1">
-                                                <div className="d XG qJc zI7 rI LS tw2">
-                                                    <div className="Pj7 sLG XG d m1e">
-                                                        <div className="XG zI7 rI LS tw3">
-                                                            <img className="hCL eD po MIw" src={"https://png.pngtree.com/png-vector/20190827/ourlarge/pngtree-pencil-icon-png-image_1713465.jpg"} />
-                                                        </div>
-                                                        <div className="KPc MIw ojN Rym p6V QLY"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {/* </Link> */}
+                            <div className='pencil' onClick={() => this.props.openModal('edit-board')}>
+                                <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png" width="20px" />
+                            </div>
                         </div>
                     </div>
                     <div className='profile-container yQa'>

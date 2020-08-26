@@ -13,6 +13,10 @@ class EditProfile extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchUser(this.props.userId)
+    }
+
     currentState() {
         const user = this.props.currentUser;
         const initialState = Object.assign({}, {

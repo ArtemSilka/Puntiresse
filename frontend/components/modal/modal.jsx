@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import PinEditFormContainer from '../pin/pin_edit_form_container'
 import BoardCreateFormContainer from '../board/board_create_form_container'
-// import BoardEditFormContainer from '../board/board_edit_form_container'
+import BoardEditContainer from '../board/board_edit_container'
 
 
 function Modal({ modal, closeModal }) {
@@ -18,9 +18,9 @@ function Modal({ modal, closeModal }) {
         case 'create-board':
             component = <BoardCreateFormContainer />
             break;
-        // case 'edit-board':
-        //     component = <BoardEditFormContainer />
-        //     break;
+        case 'edit-board':
+            component = <BoardEditContainer />
+            break;
         default:
             return null;
     }
