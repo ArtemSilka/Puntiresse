@@ -51,7 +51,6 @@ class BoardCreateForm extends React.Component {
                                             value={this.state.description}
                                             onChange={this.update('description')}
                                         />
-                                        {/* {this.renderErrors()} */}
                                     </div>
                                 </div>
                             </div>

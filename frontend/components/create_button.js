@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { openModal } from '../actions/modal_actions';
 
 const addButton = () => {
     document.getElementById("add").classList.toggle("show-menu")
 }
-
 const create = () => (
     <button className="rYa eD ad yQo EY qrs na add" type="button">
         <div className="x8f d _O1 No m8 OGJ YbY tw6 a_A but" onClick={addButton}>
@@ -23,7 +23,7 @@ const create = () => (
                         </div>
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link className="add-button" to="/create-board" >
                         <div className="pad">
                             <img src="https://img.icons8.com/metro/26/000000/plus-math.png" height="13" width="13" />
@@ -32,7 +32,7 @@ const create = () => (
                             Create a Board
                         </div>
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     </button>

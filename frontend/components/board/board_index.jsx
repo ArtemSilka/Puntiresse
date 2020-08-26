@@ -99,6 +99,9 @@ class ProfileBoardIndex extends React.Component {
                                 </div>
                             </Link>
                         </div>
+                        <div className='pencil An' onClick={() => this.props.openModal('create-board')}>
+                            <img src="https://cdn2.iconfinder.com/data/icons/50-material-design-round-corner-style/44/Add-512.png" width="30px" />
+                        </div>
                     </div>
 
                     <div className='profile yQa'>
