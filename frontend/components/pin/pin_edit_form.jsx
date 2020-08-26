@@ -114,11 +114,11 @@ class PinEditForm extends React.Component {
                             
                             <div className="box-footer">
                                 <div className="Gd kN em IL rI LS">
-                                    <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI" onClick={this.handleDelete}>
+                                    {/* <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI" onClick={this.handleDelete}>
                                         <div className="ES oF Je tR t7 mW">
                                             <span className="grey">Delete</span>
                                         </div>
-                                    </button>
+                                    </button> */}
                                 </div>
                                 <div className="Gd kN em IL rI LS huk">
                                     <button className="Ia LS US ad EY Zc Z3 hA- a_A zz na eD rI BE" >

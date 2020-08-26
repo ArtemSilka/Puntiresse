@@ -68,11 +68,11 @@ class BoardEdit extends React.Component {
                             </div>
                             <div className="_O1 Ia ptr ml">
                                 <div className="df">
-                                    <button onClick={this.handleDelete} className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI">
+                                    {/* <button onClick={this.handleDelete} className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI">
                                         <div className="ES oF Je tR t7 mW">
                                             <span className="grey oF">Delete</span>
                                         </div>
-                                    </button>
+                                    </button> */}
                                 </div>
                                 <div className="df">
                                     <button onClick={this.props.closeModal} className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI">
