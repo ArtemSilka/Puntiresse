@@ -63,6 +63,9 @@ class PinShow extends React.Component {
 
         return (
             <div className="_O1 fa po ephb hui" >
+                <div className="back" onClick={() => this.props.history.goBack()}>
+                    <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-line/84/Left_Arrow_-512.png" width="40px" />
+                </div>
                 {create()}
                 <div className="oF fv hhu">
                     
