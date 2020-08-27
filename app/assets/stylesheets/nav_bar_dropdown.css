@@ -2,6 +2,7 @@
     position: relative;
     min-height: auto;
 }
+
 .menu-back{
     display: none;
     position: fixed;
@@ -11,6 +12,17 @@
     left: 0;
     z-index: 100;
 }
+
+.boardsList{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
 .drop-down-menu{
     position: absolute;
     text-align: left;

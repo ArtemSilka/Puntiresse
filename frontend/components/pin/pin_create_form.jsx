@@ -14,11 +14,17 @@ class CreatePinForm extends React.Component {
             photoUrl: null,
             errors: this.props.errors,
             toShow: false,
-            toIndex: null
+            toIndex: null,
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.selectBoard = this.selectBoard.bind(this);
+        this.showMenu = this.showMenu.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchAllBoards();
     }
 
     handleSubmit(e) {
@@ -36,13 +42,9 @@ class CreatePinForm extends React.Component {
             formData.append('pin[photo]', this.state.photoFile);
         }
         this.props.createPin(formData)
-            .then(
-                response => {
-
+            .then(response => {
                     this.setState({ toShow: true, toIndex: response.pin.id }),
-                        (err) => {
-                            this.setState({ errors: this.renderErrors() })
-                        }
+                        (err) => {this.setState({ errors: this.renderErrors() })}
                 }
             );
     }
@@ -76,6 +78,45 @@ class CreatePinForm extends React.Component {
         )
     }
 
+    showMenu() {
+        document.getElementById("boards").classList.toggle("show-menu")
+    }
+
+    boardsList() {
+
+        const { boards } = this.props;
+        if (!boards) return null;
+        return (
+            <div>
+                <button className="LS US ad EY Zc Z3 hA- na po eD rI wid noBr1" type="button">
+                <div className="ES oF Je t7 mW" onClick={this.showMenu} id="selected-text">
+                    Select board
+                </div>
+                </button>
+                <div id="boards" className="menu-back">
+                    <ul className="select-board oF mW" onClick={e => e.stopPropagation()}>
+                        {boards.map((board, idx) => {
+                            if (board.user_id === this.props.currentUser.id) {
+                            return (
+                                <li key={idx}
+                                    value={board.id}
+                                    className=""
+                                    onClick={this.selectBoard}
+                                >{board.name}</li>
+                            )}
+                        })}
+                    </ul>
+                </div>
+            </div>
+        )
+    }
+
+    selectBoard(e) {
+        document.getElementById("selected-text").innerHTML = e.currentTarget.innerHTML;
+        this.showMenu(e);
+        this.update("board_id")(e);
+    }
+
     render() {
         const imagePreview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : (
             <div className="df">
@@ -84,17 +125,9 @@ class CreatePinForm extends React.Component {
         );
 
         if (this.state.toShow) {
-
             return (
                 <Redirect to={`/pins/${this.state.toIndex}`} />
-            )
-        }
-
-        // const display = !imagePreview ? 'display-none' : '';
-
-        const showMenu = () => {
-            document.getElementById("selectBoard").classList.toggle("show-menu")
-        }
+                )}
 
         return (
 
@@ -104,20 +137,7 @@ class CreatePinForm extends React.Component {
                     <div className="box">
                         <form onSubmit={this.handleSubmit} className="form1">
                             <div className="_O1 jcfe">
-                                <div className="zI7 rI LS">
-                                    <button className="LS US ad EY Zc Z3 hA- si na po eD rI wa noBr1" type="button">
-                                        <div className="ES oF Je tR t7 mW" onClick={showMenu}>
-                                            SELECT BOARD
-                                        </div>
-                                        <div id="selectBoard" className="menu-back" onClick={showMenu}>
-                                            <ul className="select-board oF mW" onClick={e => e.stopPropagation()}>
-                                                <li
-                                                // onClick={logout}
-                                                >Board1</li>
-                                            </ul>
-                                        </div>
-                                    </button>
-                                </div>
+                                {this.boardsList()}
                                 <button className="LS US ad EY Zc Z3 hA- si lg na po eD rI wa noBr">
                                     <div className="ES oF Je tR t7 mW">
                                         <span className="oF">Save</span>
