@@ -41,4 +41,5 @@ Puntiresse is a single page app inspired by Pinterest.
 </div>
 
 ## Future Plans
-- integerate search
+- Integerate search
+- Follows
