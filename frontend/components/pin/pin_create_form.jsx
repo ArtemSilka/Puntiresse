@@ -87,8 +87,8 @@ class CreatePinForm extends React.Component {
         const { boards } = this.props;
         if (!boards) return null;
         return (
-            <div>
-                <button className="LS US ad EY Zc Z3 hA- na po eD rI wid noBr1" type="button">
+            <div className="">
+                <button className="sb LS US ad EY Zc Z3 hA- na po eD rI wid noBr1" type="button">
                 <div className="ES oF Je t7 mW" onClick={this.showMenu} id="selected-text">
                     Select board
                 </div>

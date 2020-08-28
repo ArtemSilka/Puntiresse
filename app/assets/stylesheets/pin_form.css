@@ -97,6 +97,17 @@
     width: 150px;
 }
 
+.wid1 {
+    width: 125px;
+    border-radius: 12px;
+    margin: 0 0 10px -13px;
+}
+
+#sbe {
+    right: 650px;
+    top: 110px;
+}
+
 .select-board{
     position: absolute;
     text-align: left;
@@ -140,3 +151,10 @@
     border-top-left-radius: 12px;
 }
 
+.sb:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.m020 {
+    margin: 0 20px;
+}

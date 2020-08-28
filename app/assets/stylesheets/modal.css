@@ -95,7 +95,7 @@
 
 .box-image {
   grid-column: 2;
-  max-width: 240px;
+  max-width: 420px;
   height: auto;
   border-radius: 16px;
 }

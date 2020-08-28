@@ -6,10 +6,12 @@ import { fetchAllBoards } from '../../util/board_api_util';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
+    const boards = Object.values(state.entities.boards).map(
+        (board) => board);
     return {
         user: state.session.currentUser,
         pin: state.entities.pins[ownProps.match.params.pinId],
-        boards: state.entities.boards
+        boards
     };
 };
 

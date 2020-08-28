@@ -5,6 +5,7 @@ import { fetchAllBoards } from '../../actions/board_actions';
 import CreatePinForm from './pin_create_form';
 
 const msp = state => {
+    
     return {
     errors: Object.values(state.errors.pins),
     currentUser: state.session.currentUser,

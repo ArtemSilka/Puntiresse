@@ -60,7 +60,9 @@ class PinShow extends React.Component {
         // const boardTitles = currentUser.boards.map((board, idx) => {
         //     return <div className="" onClick={this.handleSelect} key={this.props.boards[0].id}>{this.props.boards[0].title}</div>;
         // })
-
+        // const edit = () => {
+            
+        // }
         return (
             <div className="_O1 fa po ephb hui" >
                 <div className="back" onClick={() => this.props.history.goBack()}>
