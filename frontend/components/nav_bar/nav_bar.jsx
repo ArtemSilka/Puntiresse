@@ -136,7 +136,7 @@ export default ({ currentUser, logout }) => {
                     </div>
                 </div>
                 <div className="rU iC rI LS">
-                    <div className="rU Ia An No rI LS">
+                    {/* <div className="rU Ia An No rI LS">
                         <div className="rG BE rI LS">
                             <a className="Tt gU EY rI eD RS jE">
                                 <div className="ES oF Je Bj eR zT mW na">About</div>
@@ -152,7 +152,7 @@ export default ({ currentUser, logout }) => {
                                 <div className="ES oF Je Bj eR zT mW na">Blog</div>
                             </a>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="Gd kN em IL rI LS">
                         <Link to="/login">
