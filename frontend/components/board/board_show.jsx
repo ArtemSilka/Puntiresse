@@ -42,7 +42,7 @@ class BoardShow extends React.Component {
                         <div className='name oF'>{this.props.board[boardId].name}</div>
                         <div className='oF'>{this.props.board[boardId].description}</div>
                     </div>
-                    <div className='profile-links'>
+                    <div className='profile-links jcfs'>
                         <div className=''>
                             <div className='pencil' onClick={() => this.props.openModal('edit-board')}>
                                 <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png" width="20px" />

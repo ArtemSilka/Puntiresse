@@ -1,7 +1,7 @@
 .profile {
   position: relative;
   width: 100%;
-  top: 20px;
+  /* top: 20px; */
 }
 
 .profile-links {
@@ -62,4 +62,21 @@
   border: rgb(226, 226, 226) solid 10px;
   border-radius: 25px;
   background-color: rgb(226, 226, 226);
+}
+
+.r48 {
+  right: 48px;
+}
+
+.pr{
+  position: relative;
+  z-index: 100;
+}
+
+.r6 {
+  right: 6px;
+}
+
+.jcfs {
+  justify-content: flex-start;
 }

@@ -25,7 +25,7 @@ import BoardShowContainer from "./board/board_show_container";
 
 
 const App = () => (  
-    <div className="">
+    <div className="scrl">
         <header>
             <Navbar />
             {/* <Landing /> */}
@@ -34,6 +34,8 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupFormContainer} />
         </header>
             <Switch>
+            <Landing exact path='/' component={Landing}/>
+
                 <ProtectedRoute exact path="/settings" component={EditProfileContainer} />
                 <ProtectedRoute exact path='/users/:userId/pins' component={ProfileContainer} />
 

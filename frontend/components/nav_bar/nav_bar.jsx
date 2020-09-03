@@ -20,7 +20,7 @@ export default ({ currentUser, logout }) => {
                                 <div className="d eig">
                                     <div className="Sl jz m8 nin hA-">
                                         <Link to="/home">
-                                            <img className="un it eD tre" src={window.logoURL} height="24px" width="24px" alt="Logo" />
+                                            <img className="un it eD" src={window.logoURL} height="24px" width="24px" alt="Logo" />
                                         </Link>
                                     </div>
                                 </div>
@@ -63,16 +63,16 @@ export default ({ currentUser, logout }) => {
                         
                         {/* Search */}
                         <div className="uU wYR zI7 rI LS thi">
-                            <div className="rU fv zz zI7 rI LS ten a_A">
+                            <div className="rU fv zz zI7 rI LS ten ">
                                 <div className="rU XG No uU zI7 rI LS ele">
                                     <div className="Eh Gd zI7 rI LS">
-                                        <img className="un B9u U9O eD" src={window.glassURL}
+                                        {/* <img className="un B9u U9O eD" src={window.glassURL}
                                             height="16" width="16">
-                                        </img>
+                                        </img> */}
                                     </div>
                                     <div className="uU zI7 rI LS Xa">
-                                        <input className="YbY bYb adZ Je dvav six Ttr yQo twe" type="text" placeholder="Search for Dogs"
-                                            />
+                                        {/* <input className="YbY bYb adZ Je dvav six Ttr yQo twe" type="text" placeholder="Search for Dogs"
+                                            /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -126,14 +126,14 @@ export default ({ currentUser, logout }) => {
     ) : (
             <div className="rU ss Ia No rI LS raz">
                 <div className="rU Ia k No rI LS">
-                    <div className="un it eD">
-                        <Link to="/">
-                            <img className="tre" src={window.logoURL} height="32px" width="32px" alt="Logo" />
-                        </Link>
-                    </div>
-                    <div className="St rI LS">
-                        <h3 className="aT ES oF Am it eR dva">Puntiresse</h3> 
-                    </div>
+                    <a className="_O1 No" href="https://www.linkedin.com/in/artemsilka/" target="_blank">
+                        <div className="un it eD">
+                                <img src={window.logoURL} height="32px" width="32px" alt="Logo" />
+                        </div>
+                        <div className="St rI LS">
+                            <h3 className="aT ES oF Am it eR dva">Puntiresse</h3> 
+                        </div>
+                    </a>
                 </div>
                 <div className="rU iC rI LS">
                     {/* <div className="rU Ia An No rI LS">

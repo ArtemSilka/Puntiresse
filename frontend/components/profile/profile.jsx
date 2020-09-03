@@ -45,7 +45,7 @@ class Profile extends React.Component {
 
                     <div className="d rU No m8 zI7 rI LS six">
                         <div className="d rU No m8 zI7 rI LS tw8">
-                            <div className="d XG qJc zI7 rI LS tw8">
+                            <div className="d qJc zI7 rI LS tw8">
                                 <div className="Pj7 sLG XG d m1e">
                                     <div className="XG zI7 rI LS tw8">
                                             {profilePhoto}
@@ -60,12 +60,12 @@ class Profile extends React.Component {
                         <span className="name oF">{user["email"].split('@')[0]}</span>
                     </div>
                     <div className='profile-links'>
-                        <div className='pencil'>
+                        <div className='pencil pr'>
                             <Link to={`/settings`}>
                                 <img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_edit-512.png" width="20px"/>
                             </Link>
                         </div>
-                        <div className='profile-links'>
+                        <div className='profile-links r48'>
                             <Link to={`/users/${user.id}/boards`}>
                                 <div className="Eh fv rI LS pya a_A">
                                     <div className="EY rI fv Xa po na">
