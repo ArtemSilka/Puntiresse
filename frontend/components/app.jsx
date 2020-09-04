@@ -29,11 +29,12 @@ const App = () => (
         <header>
             <Navbar />
             
+            <AuthRoute path='/' component={Landing} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
         </header>
             <Switch>
-            <Landing exact path='/' component={Landing}/>
+            {/* <Landing exact path='/' component={Landing}/> */}
 
                 <ProtectedRoute exact path="/settings" component={EditProfileContainer} />
                 <ProtectedRoute exact path='/users/:userId/pins' component={ProfileContainer} />
