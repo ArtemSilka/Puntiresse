@@ -5,10 +5,22 @@ import create from '../create_button';
 class PinIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.removeLoader = this.removeLoader.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchAllPins();
+        this.props.fetchAllPins()
+    }
+
+    removeLoader() {
+        setTimeout(function () {
+            $('#loader').removeClass('loader-container');
+        }, 1000);
+        setTimeout(function () {
+            $('#spinner').removeClass('lds-grid');
+        }, 1001);
+        
     }
 
     render() {
@@ -19,9 +31,23 @@ class PinIndex extends React.Component {
         
         return (
             <div>
+                <div id ="loader" className="loader-container">
+                    <div id="spinner" class="lds-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
                 {create()}
                 <div className="pin-index-container">
                     {allPins}
+                    {this.removeLoader()}
                 </div>
             </div>
         )
