@@ -25,7 +25,7 @@ import BoardShowContainer from "./board/board_show_container";
 
 
 const App = () => (  
-    <div className="scrl">
+    <div>
         <header>
             <Navbar />
             {/* <Landing /> */}
