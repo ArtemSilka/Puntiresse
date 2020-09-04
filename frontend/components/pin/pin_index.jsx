@@ -1,6 +1,6 @@
 import React from 'react'
 import PinIndexItem from './pin_index_item';
-import create from '../create_button'
+import create from '../create_button';
 
 class PinIndex extends React.Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class PinIndex extends React.Component {
         const allPins = pins.map(pin => (
             <PinIndexItem key={pin.id} pin={pin} />
         ))
-
+        
         return (
             <div>
                 {create()}
