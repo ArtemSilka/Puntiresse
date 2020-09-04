@@ -28,7 +28,6 @@ const App = () => (
     <div>
         <header>
             <Navbar />
-            {/* <Landing /> */}
             
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />

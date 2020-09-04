@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Landing from "../landing/landing";
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -72,12 +73,14 @@ class SignupForm extends React.Component {
 
         return (
             <div className="modal-container">
-                <Link className="X Ia LS ad Z3 hA- na eD rI" to='/'>
+                <Link className="X Ia LS ad Z3 na eD rI" to='/'>
                     <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src={window.xURL} />
                     {/* <button
                         className="modal-x-button Ia LS ad Z3 hA- na eD rI">
                     </button> */}
                 </Link>
+
+                <Landing />
 
                 <div className="modal-box-container">
 
