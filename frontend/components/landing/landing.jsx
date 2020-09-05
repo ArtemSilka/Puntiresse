@@ -5,15 +5,15 @@ export default () => {
   let greeting = (window.location.hash.split("/")[1].includes("login") || window.location.hash.split("/")[1].includes("signup")) ? (
     <div className="landing-greeting uF">
       <div id="cf0">
-        <img className="" src={window.inspiration} />
-        <img className="first" src={window.welcome} />
+        <img className="" src={window.findHere} />
+        <img className="first" src={window.privet} />
       </div>
     </div>
     ) : (
     <div className="landing-greeting oF">
       <div id="cf0">
-        <img className="" src={window.inspiration} />
-        <img className="first" src={window.welcome} />
+        <img className="" src={window.findHere} />
+        <img className="first" src={window.privet} />
       </div>
     </div>
   );

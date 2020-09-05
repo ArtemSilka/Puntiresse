@@ -32,7 +32,7 @@ class PinIndex extends React.Component {
         return (
             <div>
                 <div id ="loader" className="loader-container">
-                    <div id="spinner" class="lds-grid">
+                    <div id="spinner" className="lds-grid">
                         <div></div>
                         <div></div>
                         <div></div>
