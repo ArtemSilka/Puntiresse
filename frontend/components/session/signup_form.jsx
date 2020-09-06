@@ -12,6 +12,16 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+
+    componentDidMount() {
+        let modal = document.getElementById('modal');
+        modal.addEventListener('click', this.closeModal)
+    }
+
+    closeModal() {
+        this.props.history.goBack();
     }
 
     handleSubmit(e) {
@@ -72,7 +82,7 @@ class SignupForm extends React.Component {
         const pwdRedBox = this.passwordErrors() ? 'redBox' : '';
 
         return (
-            <div className="modal-container">
+            <div id="modal" className="modal-container">
                 <Link className="X Ia LS ad Z3 na eD rI" to='/'>
                     <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src={window.xURL} />
                     {/* <button
