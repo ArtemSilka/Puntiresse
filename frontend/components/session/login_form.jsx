@@ -13,16 +13,6 @@ class LoginForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-    }
-
-    componentDidMount() {
-        let modal = document.getElementById('modal');
-        modal.addEventListener('click', this.closeModal)
-    }
-
-    closeModal() {
-        this.props.history.goBack();
     }
 
     handleSubmit(e) {
@@ -89,14 +79,13 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        debugger
         const emailRedbox = this.emailErrors() ? 'redBox' : '';
         const pwdRedBox = this.passwordErrors() ? 'redBox' : '';
 
         return (
-            <div id="modal" className="modal-container">
+            <div className="modal-container">
                 <Link className="X Ia LS ad Z3 na eD rI" to='/'>
-                    <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src={window.xURL} />
+                    <img className="modal-x-button Ia LS ad Z3 hA- na eD rI" src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/x.svg" />
                     {/* <button 
                         className="modal-x-button Ia LS ad Z3 hA- na eD rI">
                     </button>  */}
@@ -108,7 +97,7 @@ class LoginForm extends React.Component {
 
                     <div className="modal-box oF">
                         <div className="logo">
-                            <img src={window.logoURL} height="50px" width="50px" alt="Logo" />
+                            <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/puntiresse_logo.png" height="50px" width="50px" alt="Logo" />
                         </div>
 
                         <div className="welcome">
@@ -178,7 +167,7 @@ class LoginForm extends React.Component {
 
                                         <button className="sub-goo dis" type="submit">
                                             <div className="dis">
-                                                <img className="bbb" src={window.googleURL} height="24px" width="24px" alt="Logo" />
+                                                <img className="bbb" src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/google.svg" height="24px" width="24px" alt="Logo" />
                                                 <div className="bbb bBb grey">Continue with Google</div>
                                             </div>
                                         </button> */}

@@ -20,7 +20,7 @@ export default ({ currentUser, logout }) => {
                                 <div className="d eig">
                                     <div className="Sl jz m8 nin hA-">
                                         <Link to="/home">
-                                            <img className="un it eD" src={window.logoURL} height="24px" width="24px" alt="Logo" />
+                                            <img className="un it eD" src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/puntiresse_logo.png" height="24px" width="24px" alt="Logo" />
                                         </Link>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ export default ({ currentUser, logout }) => {
                             <div className="zI7 rI LS tw7">
                                 <button className="rYa eD ad yQo EY qrs na" type="button">
                                     <div className="x8f d _O1 No m8 OGJ YbY tw5 a_A" onClick={showMenu}>
-                                        <img className="un B9u U9O eD" src={window.dropdownURL} height="20" width="20"/>
+                                        <img className="un B9u U9O eD" src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/dropdown.svg" height="20" width="20"/>
                                     </div>
                                     <div id="drop" className="menu-back" onClick={showMenu}>
                                         <ul className="drop-down-menu oF mW" onClick={e => e.stopPropagation()}>
@@ -128,7 +128,7 @@ export default ({ currentUser, logout }) => {
                 <div className="rU Ia k No rI LS">
                     <a className="_O1 No" href="https://www.linkedin.com/in/artemsilka/" target="_blank">
                         <div className="un it eD">
-                                <img src={window.logoURL} height="32px" width="32px" alt="Logo" />
+                                <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/puntiresse_logo.png" height="32px" width="32px" alt="Logo" />
                         </div>
                         <div className="St rI LS">
                             <h3 className="aT ES oF Am it eR dva">Puntiresse</h3> 
