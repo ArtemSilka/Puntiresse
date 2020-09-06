@@ -8,6 +8,7 @@ class ProfileBoardIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.allBoards;
+        this.removeLoader = this.removeLoader.bind(this);
     }
 
     componentDidMount() {
@@ -23,6 +24,15 @@ class ProfileBoardIndex extends React.Component {
         if (Object.values(prevProps.allBoards).length !== Object.values(this.props.allBoards).length) {
             this.props.fetchAllBoards();
         }
+    }
+
+    removeLoader() {
+        setTimeout(function () {
+            $('#loader').removeClass('inside-container');
+        }, 500);
+        setTimeout(function () {
+            $('#spinner').removeClass('lds-grid');
+        }, 501);
     }
 
     render() {
@@ -105,7 +115,21 @@ class ProfileBoardIndex extends React.Component {
                     </div>
 
                     <div className='profile yQa'>
+                        <div id="loader" className="inside-container">
+                            <div id="spinner" className="lds-grid">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         {userBoards}
+                        {this.removeLoader()}
                     </div>
                 </div>
             </div>

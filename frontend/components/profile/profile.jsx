@@ -9,6 +9,7 @@ class Profile extends React.Component {
     constructor(props) {
         super(props);
 
+        this.removeLoader = this.removeLoader.bind(this);
     }
 
     componentDidMount() {
@@ -21,6 +22,15 @@ class Profile extends React.Component {
         if (prevProps.userId !== this.props.userId) {
             this.props.fetchUser(this.props.match.params.userId)
         }
+    }
+
+    removeLoader() {
+        setTimeout(function () {
+            $('#loader').removeClass('inside-container');
+        }, 500);
+        setTimeout(function () {
+            $('#spinner').removeClass('lds-grid');
+        }, 501);
     }
 
     render() {
@@ -92,7 +102,21 @@ class Profile extends React.Component {
                     </div>
 
                     <div className='profile-container yQa'>
+                        <div id="loader" className="inside-container">
+                            <div id="spinner" className="lds-grid">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         {userPins}
+                        {this.removeLoader()}
                     </div>
                 </div>
             </div>

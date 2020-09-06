@@ -7,7 +7,8 @@ import create from '../create_button';
 class BoardShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.board
+        this.state = this.props.board;
+        this.removeLoader = this.removeLoader.bind(this);
     }
 
     componentDidMount() {
@@ -22,6 +23,15 @@ class BoardShow extends React.Component {
         if (Object.values(prevProps.board).length !== Object.values(this.props.board).length) {
             this.props.fetchBoard(this.props.match.params.boardId)
         }
+    }
+
+    removeLoader() {
+        setTimeout(function () {
+            $('#loader').removeClass('inside-container');
+        }, 500);
+        setTimeout(function () {
+            $('#spinner').removeClass('lds-grid');
+        }, 501);
     }
 
     render() {
@@ -50,7 +60,21 @@ class BoardShow extends React.Component {
                         </div>
                     </div>
                     <div className='profile-container yQa'>
+                        <div id="loader" className="inside-container">
+                            <div id="spinner" className="lds-grid">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         {boardPins}
+                        {this.removeLoader()}
                     </div>
                 </div>
             </div>

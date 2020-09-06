@@ -149,6 +149,16 @@
     z-index: 1000;
 }
 
+.inside-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(76, 76, 76, 1);
+    z-index: 1000;
+}
+
 /* loader */
 
 .lds-grid {
