@@ -5,7 +5,7 @@ Puntiresse is a single page app inspired by Pinterest.
 [Visit the site](http://www.puntiresse.com/#/)
 
 <div align="center">
-  <img src="./app/assets/images/img1.png">
+  <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/img1.png">
 </div>
 
 ## Technologies
@@ -21,7 +21,7 @@ Puntiresse is a single page app inspired by Pinterest.
 - Demo login available
 
 <div align="center">
-  <img src="./app/assets/images/img2.gif">
+  <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/img2.gif">
 </div>
 
 ### Pins and Boards
@@ -30,16 +30,17 @@ Puntiresse is a single page app inspired by Pinterest.
 - Users can create/view boards
 
 <div align="center">
-  <img src="./app/assets/images/img3.gif">
+  <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/img3.gif">
 </div>
 
 ### Profile
 - Users can view/edit own profile
 
 <div align="center">
-  <img src="./app/assets/images/img4.png">
+  <img src="https://active-storage-puntiresse-pro.s3.amazonaws.com/general/img4.png">
 </div>
 
 ## Future Plans
-- Integerate search
+- Repin
+- Search
 - Follows

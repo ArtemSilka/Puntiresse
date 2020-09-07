@@ -70,7 +70,10 @@ export default ({ currentUser, logout }) => {
                                             height="16" width="16">
                                         </img> */}
                                     </div>
-                                    <div className="uU zI7 rI LS Xa">
+                                        <div className="uU zI7 rI LS Xa repSe">
+                                            <Link to="/home">
+                                                <h3 className="aT ES oF Am eR dva">Puntiresse</h3>
+                                            </Link>
                                         {/* <input className="YbY bYb adZ Je dvav six Ttr yQo twe" type="text" placeholder="Search for Dogs"
                                             /> */}
                                         </div>

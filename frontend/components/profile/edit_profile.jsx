@@ -13,12 +13,12 @@ class EditProfile extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchUser(this.props.userId)
+    componentWillMount() {
+        this.props.fetchUser(this.props.currentUser.id)
     }
 
     currentState() {
-        const user = this.props.currentUser;
+        const user = this.props.user[this.props.currentUser.id];
         const initialState = Object.assign({}, {
             id: user.id,
             email: user.email,
@@ -37,7 +37,7 @@ class EditProfile extends React.Component {
     }
 
     handleDone(e) {
-        e.preventDefault();
+        // e.preventDefault();
         const s = this.currentState();
         const details = Object.assign({}, this.state);
         delete details["id"];
@@ -53,7 +53,8 @@ class EditProfile extends React.Component {
         this.props.updateUser(formData, this.state.id).then(
             () => location.reload(false)
         )
-        this.props.history.push(`/users/${s.id}/pins`)
+        // this.props.history.push(`/users/${s.id}/pins`)
+        this.props.history.push(`/home`)
     }
 
     handleFile(e) {
@@ -152,7 +153,9 @@ class EditProfile extends React.Component {
                                             <div className="Gd kN em IL rI LS">
                                                 <button
                                                     className="Ia LS US ad EY Zc Z3 hA- a_A zz na po eD rI"
-                                                    onClick={() => document.getElementById("change-button").click()}>
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        return (document.getElementById("change-button").click())}}>
                                                     <div className="ES oF Je tR t7 mW">
                                                         <span className="grey oF">Change</span>
                                                     </div>

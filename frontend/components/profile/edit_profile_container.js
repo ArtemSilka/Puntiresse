@@ -6,8 +6,7 @@ const msp = (state, ownProps) => {
     return {
     errors: state.errors.user,
     currentUser: state.session.currentUser,
-    userId: ownProps.match.params.userId,
-    user: state.entities.users[ownProps.match.params.userId]
+    user: state.entities.users
 }};
 
 const mdp = dispatch => ({
