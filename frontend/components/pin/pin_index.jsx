@@ -16,10 +16,10 @@ class PinIndex extends React.Component {
     removeLoader() {
         setTimeout(function () {
             $('#loader').removeClass('loader-container');
-        }, 1000);
+        }, 1500);
         setTimeout(function () {
             $('#spinner').removeClass('lds-grid');
-        }, 1001);
+        }, 1501);
         
     }
 
